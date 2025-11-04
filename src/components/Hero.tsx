@@ -1,14 +1,23 @@
-import heroImage from "@/assets/hero-bg.jpg";
-
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+      {/* Video Background */}
+      <div className="absolute inset-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source
+            src="https://cdn.pixabay.com/video/2023/05/02/159944-821718907_large.mp4"
+            type="video/mp4"
+          />
+          {/* Fallback for browsers that don't support video */}
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-background/75 backdrop-blur-[2px]" />
       </div>
 
       {/* Content */}
