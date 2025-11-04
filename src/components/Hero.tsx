@@ -11,13 +11,13 @@ const Hero = () => {
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source
-            src="https://cdn.pixabay.com/video/2023/05/02/159944-821718907_large.mp4"
+            src="https://videos.pexels.com/video-files/3255275/3255275-uhd_2560_1440_25fps.mp4"
             type="video/mp4"
           />
           {/* Fallback for browsers that don't support video */}
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-background/75 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
       {/* Content */}
