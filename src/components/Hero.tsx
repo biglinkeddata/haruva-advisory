@@ -29,7 +29,7 @@ const Hero = () => {
           <span className="text-primary font-semibold">Performance</span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
-          Guiding organizations through complexity to achieve sustainable growth and lasting impact
+          Helping purpose-driven ventures transform vision into strategy, strategy into systems, and systems into sustainable growth
         </p>
       </div>
 
