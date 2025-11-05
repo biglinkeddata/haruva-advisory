@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import everleafLogo from "@/assets/everleaf-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,10 +31,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4 py-6">
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="text-2xl font-bold">
-              <span className="text-foreground">YG</span>
-              <span className="text-primary"> Advisory</span>
-            </div>
+            <img 
+              src={everleafLogo} 
+              alt="Everleaf" 
+              className="h-10 md:h-12 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
