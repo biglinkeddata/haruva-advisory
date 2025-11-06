@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-6 animate-fade-in">
-          <span className="text-foreground">From Purpose</span>
+          <span className="text-foreground">From <span className="text-purpose">Purpose</span></span>
           <br />
           <span className="text-foreground">to </span>
           <span className="text-primary font-semibold">Performance</span>
