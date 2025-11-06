@@ -1,6 +1,35 @@
 import strategyIcon from "@/assets/strategy-icon.png";
 import transformationIcon from "@/assets/transformation-icon.png";
 import advisoryIcon from "@/assets/advisory-icon.png";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
+const ServiceCard = ({ service, index }: { service: any; index: number }) => {
+  const { elementRef, isVisible } = useScrollAnimation();
+  
+  return (
+    <div
+      ref={elementRef}
+      className={`group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] ${
+        isVisible ? 'animate-fade-in' : 'opacity-0'
+      }`}
+      style={{ animationDelay: `${index * 150}ms` }}
+    >
+      <div className="mb-6 flex justify-center">
+        <img 
+          src={service.icon} 
+          alt={service.title}
+          className="w-24 h-24 object-contain group-hover:scale-110 transition-transform duration-300"
+        />
+      </div>
+      <h3 className="text-2xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
+        {service.title}
+      </h3>
+      <p className="text-muted-foreground leading-relaxed">
+        {service.description}
+      </p>
+    </div>
+  );
+};
 
 const Services = () => {
   const services = [
@@ -39,24 +68,7 @@ const Services = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)]"
-            >
-              <div className="mb-6 flex justify-center">
-                <img 
-                  src={service.icon} 
-                  alt={service.title}
-                  className="w-24 h-24 object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <h3 className="text-2xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+            <ServiceCard key={index} service={service} index={index} />
           ))}
         </div>
       </div>
