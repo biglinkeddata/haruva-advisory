@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import everleafLogo from "@/assets/everleaf-logo.png";
+import haruvaLogo from "@/assets/haruva-logo.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,8 +32,8 @@ const Navigation = () => {
         <nav className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img 
-              src={everleafLogo} 
-              alt="Everleaf" 
+              src={haruvaLogo} 
+              alt="Haruva Advisory" 
               className="h-10 md:h-12 w-auto"
             />
           </div>
