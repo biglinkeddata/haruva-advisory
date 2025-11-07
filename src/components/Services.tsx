@@ -1,6 +1,8 @@
-import strategyIcon from "@/assets/strategy-icon.png";
-import transformationIcon from "@/assets/transformation-icon.png";
-import advisoryIcon from "@/assets/advisory-icon.png";
+import strategyCommercial from "@/assets/strategy-commercial.jpg";
+import operationalTransformation from "@/assets/operational-transformation.jpg";
+import brandPartnership from "@/assets/brand-partnership.jpg";
+import leadershipAlignment from "@/assets/leadership-alignment.jpg";
+import transformationIntegration from "@/assets/transformation-integration.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ServiceCard = ({ service, index }: { service: any; index: number }) => {
@@ -14,19 +16,41 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       }`}
       style={{ animationDelay: `${index * 150}ms` }}
     >
-      <div className="mb-6 flex justify-center">
+      <div className="mb-6 overflow-hidden rounded-lg">
         <img 
-          src={service.icon} 
+          src={service.image} 
           alt={service.title}
-          className="w-24 h-24 object-contain group-hover:scale-110 transition-transform duration-300"
+          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <h3 className="text-2xl font-semibold mb-4 text-foreground group-hover:text-primary transition-colors">
+      <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
         {service.title}
       </h3>
-      <p className="text-muted-foreground leading-relaxed">
+      <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+        {service.subtitle}
+      </p>
+      <p className="text-sm text-muted-foreground leading-relaxed mb-4">
         {service.description}
       </p>
+      {service.focusAreas && (
+        <div className="mb-4">
+          <p className="text-sm font-semibold text-foreground mb-2">Focus Areas:</p>
+          <ul className="text-sm text-muted-foreground space-y-1">
+            {service.focusAreas.map((area: string, idx: number) => (
+              <li key={idx} className="flex items-start">
+                <span className="text-primary mr-2">•</span>
+                <span>{area}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      <div className="pt-4 border-t border-border">
+        <p className="text-sm font-semibold text-primary mb-1">Outcome:</p>
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          {service.outcome}
+        </p>
+      </div>
     </div>
   );
 };
@@ -34,19 +58,64 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 const Services = () => {
   const services = [
     {
-      icon: strategyIcon,
-      title: "Strategic Planning",
-      description: "Comprehensive strategic frameworks that align vision with execution, ensuring your organization is positioned for long-term success."
+      image: strategyCommercial,
+      title: "Strategy & Commercial Readiness",
+      subtitle: "From clarity to commercial traction.",
+      description: "We help you articulate your value, define your offer architecture, sharpen your market position, and build a go-to-market plan that feels true and performs.",
+      focusAreas: [
+        "Market & positioning clarity",
+        "Pricing and revenue architecture",
+        "Go-to-market design & partnership pathways",
+        "Investor narrative & strategic storytelling"
+      ],
+      outcome: "Clear, compelling, investable direction that people can understand, buy, and rally behind."
     },
     {
-      icon: transformationIcon,
-      title: "Business Transformation",
-      description: "End-to-end transformation programs that reshape operations, culture, and capabilities to meet evolving market demands."
+      image: operationalTransformation,
+      title: "Operational Transformation & Organisational Design",
+      subtitle: "Systems and structures that enable scale.",
+      description: "We build the internal architecture that allows your organisation to grow without fragmentation, burnout, or drift.",
+      focusAreas: [
+        "Operating model and team structure",
+        "Process and workflow design",
+        "KPI and accountability systems",
+        "Leadership rhythm & decision cadence"
+      ],
+      outcome: "A business that runs smoothly — with clarity, simplicity, and shared ownership."
     },
     {
-      icon: advisoryIcon,
-      title: "Executive Advisory",
-      description: "Trusted advisory services for C-suite executives navigating complex decisions and driving organizational excellence."
+      image: brandPartnership,
+      title: "Brand & Partnership Alignment",
+      subtitle: "Authentic growth ecosystems.",
+      description: "Your brand is not your logo — it is how your purpose is expressed in the market and in relationships. We design the narrative, messaging, and partnerships that extend your impact with integrity.",
+      focusAreas: [
+        "Narrative and messaging strategy",
+        "Partnership and community ecosystem design",
+        "Strategic communications alignment",
+        "Pitch & presentation architecture"
+      ],
+      outcome: "Growth that comes from resonance — not force."
+    },
+    {
+      image: leadershipAlignment,
+      title: "Leadership Alignment & Culture",
+      subtitle: "Coherence that drives performance.",
+      description: "Transformation happens when leadership, culture, and strategy are in conversation. We facilitate the alignment needed for clarity, trust, and decisive progress.",
+      focusAreas: [
+        "Executive team alignment",
+        "Vision & values frameworks",
+        "Leadership presence and relational dynamics",
+        "Offsites, strategic retreats, and decision frameworks"
+      ],
+      outcome: "A leadership team that moves as one."
+    },
+    {
+      image: transformationIntegration,
+      title: "Transformation Integration",
+      subtitle: "Embedding change that lasts.",
+      description: "This is where shift becomes identity — where the organisation no longer needs to 'try' to operate differently — because it now is different.",
+      focusAreas: null,
+      outcome: "The new way of working becomes natural, embodied, and self-sustaining."
     }
   ];
 
@@ -66,7 +135,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
