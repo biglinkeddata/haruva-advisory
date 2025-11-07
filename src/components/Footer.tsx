@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Facebook, Instagram, Youtube } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 const Footer = () => {
   return (
@@ -9,59 +10,62 @@ const Footer = () => {
             © {new Date().getFullYear()} Everleaf. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
-              Terms of Service
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter size={20} />
-            </a>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook size={20} />
-            </a>
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
-            <a 
-              href="https://youtube.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube size={20} />
-            </a>
+            <div className="flex items-center gap-4">
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter size={20} />
+              </a>
+              <a 
+                href="https://facebook.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={20} />
+              </a>
+              <a 
+                href="https://instagram.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a 
+                href="https://youtube.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube size={20} />
+              </a>
+            </div>
+            <Separator orientation="vertical" className="h-6" />
+            <div className="flex items-center gap-6">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Terms of Service
+              </a>
+            </div>
           </div>
         </div>
       </div>
