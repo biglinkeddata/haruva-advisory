@@ -1,11 +1,69 @@
-import { Mail, Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+const contactSchema = z.object({
+  email: z.string().email({ message: "Please enter a valid email address" }),
+  message: z.string().min(10, { message: "Message must be at least 10 characters" }).max(1000, { message: "Message must be less than 1000 characters" }),
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+  });
+
+  const onSubmit = async (data: ContactFormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch("https://formspree.io/f/mdkpqrba", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for reaching out. We'll get back to you soon.",
+        });
+        reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-24 bg-card">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light mb-6">
               Let's <span className="text-primary font-semibold">Connect</span>
@@ -16,53 +74,46 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <div className="space-y-2">
+              <Label htmlFor="email">Your Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="your@email.com"
+                {...register("email")}
+                className={errors.email ? "border-destructive" : ""}
+              />
+              {errors.email && (
+                <p className="text-sm text-destructive">{errors.email.message}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="message">Your Message</Label>
+              <Textarea
+                id="message"
+                placeholder="Tell us about your needs..."
+                rows={6}
+                {...register("message")}
+                className={errors.message ? "border-destructive" : ""}
+              />
+              {errors.message && (
+                <p className="text-sm text-destructive">{errors.message.message}</p>
+              )}
+            </div>
+
             <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Mail className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">Email</h3>
-              <a 
-                href="mailto:contact@ygadvisory.com" 
-                className="text-muted-foreground hover:text-primary transition-colors"
+              <Button 
+                type="submit"
+                size="lg"
+                disabled={isSubmitting}
+                className="px-8"
               >
-                contact@ygadvisory.com
-              </a>
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
             </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <Phone className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">Phone</h3>
-              <a 
-                href="tel:+1234567890" 
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                +1 (234) 567-890
-              </a>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-4">
-                <MapPin className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2 text-foreground">Location</h3>
-              <p className="text-muted-foreground">
-                Global Advisory Services
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Button 
-              size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 px-8"
-              onClick={() => window.location.href = 'mailto:contact@ygadvisory.com'}
-            >
-              Schedule a Consultation
-            </Button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
