@@ -15,5 +15,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: '/haruva-advisory/', // 👈 use your repo name here
+  base: '/', // 👈 use your repo name here
 }));
