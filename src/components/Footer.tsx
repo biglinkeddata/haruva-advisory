@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Everleaf. All rights reserved.
+            © {new Date().getFullYear()} Haruva Advisory. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4">
