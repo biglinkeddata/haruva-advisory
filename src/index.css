@@ -88,6 +88,10 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
   }
+
+  #lovable-badge {
+    display: none !important;
+  }
 }
 
 @layer utilities {
