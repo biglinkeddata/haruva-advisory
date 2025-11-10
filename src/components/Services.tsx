@@ -1,4 +1,4 @@
-import strategyCommercial from "@/assets/strategy-commercial.png";
+import strategyCommercial from "@/assets/strategy-commercial.jpg";
 import operationalTransformation from "@/assets/operational-transformation.jpg";
 import brandPartnership from "@/assets/brand-partnership.jpg";
 import leadershipAlignment from "@/assets/leadership-alignment.jpg";
