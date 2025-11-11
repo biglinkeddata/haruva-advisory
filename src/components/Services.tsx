@@ -113,9 +113,15 @@ const Services = () => {
       image: transformationIntegration,
       title: "Transformation Integration",
       subtitle: "Embedding change that lasts.",
-      description: "This is where shift becomes identity — where the organisation no longer needs to 'try' to operate differently — because it now is different.",
-      focusAreas: null,
-      outcome: "The new way of working becomes natural, embodied, and self-sustaining."
+      description: "This is where the new way of working becomes part of the organisation's identity — where habits shift, behaviour aligns, and the culture holds the growth without constant effort or external push.",
+      focusAreas: [
+        "Cultural anchoring & behavioural integration",
+        "Leadership modelling & communication practices",
+        "Rituals, rhythms, and reinforcement structures",
+        "Identity narrative alignment (internal / external)",
+        "Capability and capacity building"
+      ],
+      outcome: "Sustainable transformation — where growth feels natural, embodied, and self-renewing."
     }
   ];
 
