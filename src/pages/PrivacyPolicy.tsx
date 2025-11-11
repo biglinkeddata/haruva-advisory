@@ -1,9 +1,14 @@
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 
 const PrivacyPolicy = () => {
+  const navigate = useNavigate();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -12,7 +17,16 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen flex flex-col bg-background">
       <Navigation />
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-16 max-w-4xl">
+        <div className="container mx-auto px-4 py-24 md:py-32">
+          <Button
+            variant="ghost"
+            onClick={() => navigate("/")}
+            className="mb-8"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Home
+          </Button>
+          
           <h1 className="text-4xl font-bold text-foreground mb-4">Privacy Policy</h1>
           <p className="text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString()}</p>
           
@@ -117,6 +131,15 @@ const PrivacyPolicy = () => {
               </p>
             </section>
           </div>
+          
+          <Button
+            variant="outline"
+            onClick={() => navigate("/")}
+            className="mt-12"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back to Home
+          </Button>
         </div>
       </main>
       <Footer />
