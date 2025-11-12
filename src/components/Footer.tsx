@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-4">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/haruva-advisory/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
@@ -59,9 +59,10 @@ const Footer = () => {
             </div>
             <Separator orientation="vertical" className="h-6" />
             <div className="flex items-center gap-6">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              <a href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 Privacy Policy
               </a>
+              <Separator orientation="vertical" className="h-6" />
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 Terms of Service
               </a>
