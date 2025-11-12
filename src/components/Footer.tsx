@@ -27,7 +27,7 @@ const Footer = () => {
                 Privacy Policy
               </a>
               <Separator orientation="vertical" className="h-6" />
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+              <a href="/terms-of-service" className="text-muted-foreground hover:text-primary transition-colors text-sm">
                 Terms of Service
               </a>
             </div>
