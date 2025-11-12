@@ -3,28 +3,34 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
-    quote: "Haruva Advisory helped us move from ambition to execution. Their clarity on strategy and go-to-market was transformative. We're now scaling with confidence and integrity.",
-    author: "Sarah Mitchell",
+    quote: "An external perspective that cuts through complexity. Their strategic clarity and pragmatism helped us define our course for the future.",
+    author: "Maria Flowers",
+    role: "Chief Revenue Officer",
+    company: "Joulen"
+  },
+  {
+    quote: "Combines strategic thinking with operational excellence — a true catalyst for growth.",
+    author: "Mark Hamilford",
+    role: "Entrepreneur & Investor",
+    company: ""
+  },
+  {
+    quote: "Energising, fearless, and constantly learning — a transformative partner who brings both discipline and creativity.",
+    author: "Dean Hopkins",
+    role: "Operating Partner",
+    company: "Business Builder"
+  },
+  {
+    quote: "Helps organisations quickly evaluate strengths and weaknesses, improving operations, culture, and growth.",
+    author: "Louise Altman",
     role: "CEO",
-    company: "GreenPath Solutions"
+    company: "Clusters"
   },
   {
-    quote: "The team brought structure to our growth without losing our soul. They understood what we stood for and helped us build systems that support, not suffocate, our mission.",
-    author: "James Chen",
-    role: "Founder",
-    company: "Wellness Collective"
-  },
-  {
-    quote: "We were struggling with leadership alignment and operational clarity. Haruva's approach was refreshingly practical - no jargon, just clear thinking and real results.",
-    author: "Elena Rodriguez",
-    role: "COO",
-    company: "Impact Ventures"
-  },
-  {
-    quote: "They helped us redesign our operating model and build partnerships that actually matter. Growth now feels sustainable, not chaotic.",
-    author: "Michael Thompson",
-    role: "Managing Director",
-    company: "Sustainable Futures Group"
+    quote: "Brings analytical sharpness and a human touch — a partner who makes ambition coherent and achievable.",
+    author: "Chris Kemp",
+    role: "Founder & CEO",
+    company: "The Ingenuity Group"
   }
 ];
 
@@ -48,7 +54,7 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
       <div className="border-t border-border pt-4">
         <p className="font-semibold text-foreground">{testimonial.author}</p>
         <p className="text-muted-foreground text-sm">
-          {testimonial.role}, {testimonial.company}
+          {testimonial.role}{testimonial.company ? `, ${testimonial.company}` : ''}
         </p>
       </div>
     </div>
