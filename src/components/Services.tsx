@@ -20,10 +20,10 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   return (
     <div
       ref={elementRef}
-      className={`group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] ${
-        isVisible ? 'animate-fade-in' : 'opacity-0'
+      className={`group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-700 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
-      style={{ animationDelay: `${index * 150}ms` }}
+      style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div className="mb-6 overflow-hidden rounded-lg">
         <img 
