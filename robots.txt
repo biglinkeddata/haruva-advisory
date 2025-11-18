@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://haruva-advisory.lovable.app/sitemap.xml
+Sitemap: https://haruvaadvisory.com/sitemap.xml
