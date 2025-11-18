@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Carousel,
@@ -6,6 +7,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselApi,
 } from "@/components/ui/carousel";
 
 const testimonials = [
@@ -70,6 +72,18 @@ const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimoni
 
 const Testimonials = () => {
   const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
   
   return (
     <section id="testimonials" className="py-24 bg-background">
@@ -102,7 +116,7 @@ const Testimonials = () => {
 
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto">
-          <Carousel className="w-full">
+          <Carousel className="w-full" setApi={setApi}>
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
@@ -116,6 +130,22 @@ const Testimonials = () => {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+          
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index 
+                    ? 'w-8 bg-primary' 
+                    : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                }`}
+                aria-label={`Go to testimonial ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
