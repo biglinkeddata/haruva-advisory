@@ -4,7 +4,7 @@ import brandPartnership from "@/assets/brand-partnership.jpg";
 import leadershipAlignment from "@/assets/leadership-alignment.jpg";
 import transformationIntegration from "@/assets/transformation-integration.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
   CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -68,6 +69,9 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 const Services = () => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const autoplayPlugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  );
 
   useEffect(() => {
     if (!api) return;
@@ -176,6 +180,7 @@ const Services = () => {
           <Carousel 
             className="w-full group/carousel cursor-grab active:cursor-grabbing" 
             setApi={setApi}
+            plugins={[autoplayPlugin.current]}
             opts={{
               align: "start",
               loop: true,
