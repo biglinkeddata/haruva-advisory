@@ -117,18 +117,16 @@ const Testimonials = () => {
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto relative">
           <Carousel 
-            className="w-full group/carousel" 
+            className="w-full" 
             setApi={setApi}
             opts={{
               align: "center",
               loop: true,
-              dragFree: true,
-              containScroll: "trimSnaps",
             }}
           >
-            <CarouselContent className="group-hover/carousel:translate-x-[-8px] transition-transform duration-500">
+            <CarouselContent>
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="group-hover/carousel:scale-[0.98] transition-transform duration-500">
+                <CarouselItem key={index}>
                   <TestimonialCard 
                     testimonial={testimonial}
                     index={index}
