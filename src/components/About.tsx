@@ -1,17 +1,32 @@
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 const About = () => {
+  const titleAnimation = useScrollAnimation();
+  const contentAnimation = useScrollAnimation();
+  const whyHaruvaAnimation = useScrollAnimation();
   return (
     <section id="about" className="py-24 bg-card">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           {/* About Section */}
-          <div className="text-center mb-12">
+          <div 
+            ref={titleAnimation.elementRef}
+            className={`text-center mb-12 transition-all duration-700 ${
+              titleAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <h2 className="text-4xl md:text-5xl font-light mb-6">
               About <span className="text-primary font-semibold">Haruva Advisory</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8" />
           </div>
 
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed mb-20">
+          <div 
+            ref={contentAnimation.elementRef}
+            className={`space-y-6 text-lg text-muted-foreground leading-relaxed mb-20 transition-all duration-700 delay-200 ${
+              contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <p>
               Haruva Advisory is a strategic partner to purpose-driven organisations across sustainability, wellness, 
               technology, and community-led sectors. We align purpose, strategy, and operations so performance becomes 
@@ -39,14 +54,21 @@ const About = () => {
 
           {/* Why Haruva Section */}
           <div className="border-t border-border pt-16">
-            <div className="text-center mb-12">
+            <div 
+              ref={whyHaruvaAnimation.elementRef}
+              className={`text-center mb-12 transition-all duration-700 ${
+                whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
+            >
               <h3 className="text-3xl md:text-4xl font-light mb-6">
                 Why <span className="text-primary font-semibold">Haruva</span>
               </h3>
               <div className="w-20 h-1 bg-primary mx-auto mb-8" />
             </div>
 
-            <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+            <div className={`space-y-6 text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-200 ${
+              whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}>
               <p className="text-foreground font-medium">
                 Haruva is a name rooted in the natural way growth unfolds.
               </p>
