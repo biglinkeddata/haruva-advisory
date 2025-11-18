@@ -116,18 +116,14 @@ const Testimonials = () => {
 
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto relative">
-          {/* Gradient fade overlays */}
-          <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-          
           <Carousel 
             className="w-full group/carousel" 
             setApi={setApi}
             opts={{
               align: "start",
               loop: true,
-              dragFree: false,
-              duration: 25,
+              dragFree: true,
+              duration: 20,
               skipSnaps: false,
             }}
           >
