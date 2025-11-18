@@ -18,13 +18,13 @@ const testimonials = [
     company: "Joulen"
   },
   {
-    quote: "Combines strategic thinking with operational excellence — a true catalyst for growth.",
+    quote: "Combines strategic thinking with operational excellence - a true catalyst for growth.",
     author: "Mark Hamilford",
     role: "Entrepreneur & Investor",
     company: ""
   },
   {
-    quote: "Energising, fearless, and constantly learning — a transformative partner who brings both discipline and creativity.",
+    quote: "Energising, fearless, and constantly learning - a transformative partner who brings both discipline and creativity.",
     author: "Dean Hopkins",
     role: "Operating Partner",
     company: "Business Builder"
@@ -36,7 +36,7 @@ const testimonials = [
     company: "Clusters"
   },
   {
-    quote: "Brings analytical sharpness and a human touch — a partner who makes ambition coherent and achievable.",
+    quote: "Brings analytical sharpness and a human touch - a partner who makes ambition coherent and achievable.",
     author: "Chris Kemp",
     role: "Founder & CEO",
     company: "The Ingenuity Group"

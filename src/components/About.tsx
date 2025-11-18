@@ -59,7 +59,7 @@ const About = () => {
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
               } delay-[400ms]`}>
-                We diagnose what's working — and what's getting in the way
+                We diagnose what's working - and what's getting in the way
               </li>
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
@@ -81,7 +81,7 @@ const About = () => {
             <p className={`transition-all duration-700 ${
               contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             } delay-[800ms]`}>
-              We don't believe in scaling at any cost. We believe in scaling in alignment — where the way you 
+              We don't believe in scaling at any cost. We believe in scaling in alignment - where the way you 
               grow reflects what you stand for.
             </p>
 
@@ -123,7 +123,7 @@ const About = () => {
                 <div>
                   <p className="font-semibold text-foreground">Haru (春 / Japanese)</p>
                   <p>
-                    means spring — a season of renewal, emergence, and living growth.
+                    means spring - a season of renewal, emergence, and living growth.
                     Not growth through pressure, but growth that comes when the conditions are right.
                   </p>
                 </div>
@@ -140,7 +140,7 @@ const About = () => {
               <p className={`italic transition-all duration-700 ${
                 whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
               } delay-[450ms]`}>
-                Together, Haruva speaks to growth that is both true and alive — growth that emerges from alignment rather than force.
+                Together, Haruva speaks to growth that is both true and alive - growth that emerges from alignment rather than force.
               </p>
 
               <p className={`font-medium text-foreground pt-4 transition-all duration-700 ${

@@ -103,20 +103,20 @@ const Services = () => {
         "KPI and accountability systems",
         "Leadership rhythm & decision cadence"
       ],
-      outcome: "A business that runs smoothly — with clarity, simplicity, and shared ownership."
+      outcome: "A business that runs smoothly - with clarity, simplicity, and shared ownership."
     },
     {
       image: brandPartnership,
       title: "Brand & Partnership Alignment",
       subtitle: "Authentic growth ecosystems.",
-      description: "Your brand is not your logo — it is how your purpose is expressed in the market and in relationships. We design the narrative, messaging, and partnerships that extend your impact with integrity.",
+      description: "Your brand is not your logo - it is how your purpose is expressed in the market and in relationships. We design the narrative, messaging, and partnerships that extend your impact with integrity.",
       focusAreas: [
         "Narrative and messaging strategy",
         "Partnership and community ecosystem design",
         "Strategic communications alignment",
         "Pitch & presentation architecture"
       ],
-      outcome: "Growth that comes from resonance — not force."
+      outcome: "Growth that comes from resonance - not force."
     },
     {
       image: leadershipAlignment,
@@ -135,7 +135,7 @@ const Services = () => {
       image: transformationIntegration,
       title: "Transformation Integration",
       subtitle: "Embedding change that lasts.",
-      description: "This is where the new way of working becomes part of the organisation's identity — where habits shift, behaviour aligns, and the culture holds the growth without constant effort or external push.",
+      description: "This is where the new way of working becomes part of the organisation's identity - where habits shift, behaviour aligns, and the culture holds the growth without constant effort or external push.",
       focusAreas: [
         "Cultural anchoring & behavioural integration",
         "Leadership modelling & communication practices",
@@ -143,7 +143,7 @@ const Services = () => {
         "Identity narrative alignment (internal / external)",
         "Capability and capacity building"
       ],
-      outcome: "Sustainable transformation — where growth feels natural, embodied, and self-renewing."
+      outcome: "Sustainable transformation - where growth feels natural, embodied, and self-renewing."
     }
   ];
 
