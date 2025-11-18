@@ -16,9 +16,9 @@ const About = () => {
       {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-20 left-10 w-[500px] h-[500px] rounded-full bg-accent/10 blur-3xl" />
-      <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-primary/40 rounded-full animate-pulse" />
-      <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-accent/50 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-2.5 h-2.5 bg-primary/40 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-primary/40 rounded-full animate-float" />
+      <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-accent/50 rounded-full animate-float-slow" />
+      <div className="absolute bottom-1/4 right-1/4 w-2.5 h-2.5 bg-primary/40 rounded-full animate-float-slower" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
