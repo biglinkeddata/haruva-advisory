@@ -25,7 +25,7 @@ const Team = () => {
           </div>
 
           {/* Team Member */}
-          <div className="bg-card rounded-lg overflow-hidden border border-border">
+          <div className="bg-card rounded-lg overflow-hidden border border-border group">
             <div className="grid md:grid-cols-[300px_1fr] gap-8">
               {/* Photo */}
               <div 
@@ -37,7 +37,7 @@ const Team = () => {
                 <img 
                   src={yossiPhoto}
                   alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent md:hidden" />
               </div>
