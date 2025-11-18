@@ -41,13 +41,17 @@ const About = () => {
               contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <p>
+            <p className={`transition-all duration-700 ${
+              contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            } delay-[300ms]`}>
               Haruva Advisory is a strategic partner to purpose-driven organisations across sustainability, wellness, 
               technology, and community-led sectors. We align purpose, strategy, and operations so performance becomes 
               predictable, grounded, and true to the organisation's identity.
             </p>
             
-            <p className="font-medium text-foreground">Our approach is steady and practical:</p>
+            <p className={`font-medium text-foreground transition-all duration-700 ${
+              contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            } delay-[350ms]`}>Our approach is steady and practical:</p>
 
             <ul className="space-y-3 pl-6">
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
@@ -72,12 +76,16 @@ const About = () => {
               </li>
             </ul>
 
-            <p>
+            <p className={`transition-all duration-700 ${
+              contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            } delay-[800ms]`}>
               We don't believe in scaling at any cost. We believe in scaling in alignment — where the way you 
               grow reflects what you stand for.
             </p>
 
-            <p className="text-foreground font-medium text-xl pt-4">
+            <p className={`text-foreground font-medium text-xl pt-4 transition-all duration-700 ${
+              contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+            } delay-[900ms]`}>
               Growth becomes coherent, human, and sustainable.
             </p>
           </div>
@@ -99,11 +107,15 @@ const About = () => {
             <div className={`space-y-6 text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-200 ${
               whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
-              <p className="text-foreground font-medium">
+              <p className={`text-foreground font-medium transition-all duration-700 ${
+                whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              } delay-[300ms]`}>
                 Haruva is a name rooted in the natural way growth unfolds.
               </p>
 
-              <div className="space-y-4 pl-4">
+              <div className={`space-y-4 pl-4 transition-all duration-700 ${
+                whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              } delay-[350ms]`}>
                 <div>
                   <p className="font-semibold text-foreground">Haru (春 / Japanese)</p>
                   <p>
@@ -121,11 +133,15 @@ const About = () => {
                 </div>
               </div>
 
-              <p className="italic">
+              <p className={`italic transition-all duration-700 ${
+                whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              } delay-[450ms]`}>
                 Together, Haruva speaks to growth that is both true and alive — growth that emerges from alignment rather than force.
               </p>
 
-              <p className="font-medium text-foreground pt-4">
+              <p className={`font-medium text-foreground pt-4 transition-all duration-700 ${
+                whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              } delay-[550ms]`}>
                 At Haruva Advisory, we believe that organisations scale best when:
               </p>
 
