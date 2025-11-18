@@ -100,9 +100,9 @@ const About = () => {
                 whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              <h3 className="text-3xl md:text-4xl font-light mb-6">
+              <h3 className="text-3xl md:text-4xl font-heading font-normal mb-6">
                 <span className={`section-heading-underline ${whyHaruvaAnimation.isVisible ? 'animate-underline' : ''}`}>
-                  Why <span className="text-primary font-semibold">Haruva</span>
+                  Why <span className="text-primary font-medium">Haruva</span>
                 </span>
               </h3>
               <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
