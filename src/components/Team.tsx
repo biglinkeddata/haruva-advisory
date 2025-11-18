@@ -40,12 +40,17 @@ const Team = () => {
                   photoAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
               >
-                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-border shadow-lg hover:shadow-xl transition-shadow duration-500">
-                  <img 
-                    src={yossiPhoto}
-                    alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
-                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                  />
+                <div className="relative">
+                  {/* Gradient backdrop */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full blur-2xl scale-110" />
+                  {/* Photo */}
+                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-border shadow-lg hover:shadow-xl transition-shadow duration-500">
+                    <img 
+                      src={yossiPhoto}
+                      alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    />
+                  </div>
                 </div>
               </div>
 
