@@ -95,9 +95,7 @@ const Testimonials = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
-            <span className={`section-heading-underline ${titleVisible ? 'animate-underline' : ''}`}>
-              What Our <span className="text-primary font-medium">Clients Say</span>
-            </span>
+            What Our <span className="text-primary font-medium">Clients Say</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
