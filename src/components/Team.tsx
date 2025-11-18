@@ -77,44 +77,44 @@ const Team = () => {
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[500ms]`}>
+                  } transition-delay-[500ms]`}>
                     I'm a strategist and operator with over twenty years of experience building and scaling ventures across sustainability, wellness, technology, leadership, and community innovation.
                   </p>
 
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[600ms]`}>
+                  } transition-delay-[600ms]`}>
                     My work sits at the intersection of purpose, performance, and transformation - helping founders and leadership teams translate vision into action and action into measurable growth.
                   </p>
 
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[700ms]`}>
+                  } transition-delay-[700ms]`}>
                     Throughout my career, I've led organisations through phases of accelerated expansion - designing strategies, operating models, and leadership systems that keep growth coherent as it scales.
                   </p>
 
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[800ms]`}>
+                  } transition-delay-[800ms]`}>
                     I founded Haruva to bring together what I've learned from years of working inside and alongside purpose-driven ventures: <span className="font-medium text-foreground">that true speed comes from alignment.</span>
                   </p>
 
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[900ms]`}>
+                  } transition-delay-[900ms]`}>
                     When clarity, systems, and leadership move as one, teams advance faster, decisions land cleaner, and growth compounds naturally.
                   </p>
 
                   <p className={`italic transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[1000ms]`}>
+                  } transition-delay-[1000ms]`}>
                     Because growth without alignment is chaos.<br />
                     And alignment without momentum is stagnation.
                   </p>
 
                   <p className={`font-medium text-foreground text-lg pt-2 transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-                  } delay-[1100ms]`}>
+                  } transition-delay-[1100ms]`}>
                     Haruva is where the two meet - where growth becomes grounded, coherent, and alive.
                   </p>
 
