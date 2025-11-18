@@ -223,6 +223,15 @@ All colors MUST be HSL.
     }
   }
 
+  @keyframes aurora-pulse {
+    0%, 100% {
+      opacity: 0.15;
+    }
+    50% {
+      opacity: 0.25;
+    }
+  }
+
   @keyframes float-slow {
     0%, 100% {
       transform: translateY(0) translateX(0) scale(1);
