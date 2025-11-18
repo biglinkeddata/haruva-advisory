@@ -129,8 +129,8 @@ const Testimonials = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="left-2 h-12 w-12 bg-background/90 hover:bg-background border-2 border-primary/20" />
+            <CarouselNext className="right-2 h-12 w-12 bg-background/90 hover:bg-background border-2 border-primary/20" />
           </Carousel>
           
           {/* Pagination Dots */}
