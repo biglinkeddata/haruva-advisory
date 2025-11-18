@@ -30,9 +30,7 @@ const About = () => {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
-              <span className={`section-heading-underline ${titleAnimation.isVisible ? 'animate-underline' : ''}`}>
-                About <span className="text-primary font-medium">Haruva Advisory</span>
-              </span>
+              About <span className="text-primary font-medium">Haruva Advisory</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
           </div>
@@ -101,9 +99,7 @@ const About = () => {
               }`}
             >
               <h3 className="text-3xl md:text-4xl font-heading font-normal mb-6">
-                <span className={`section-heading-underline ${whyHaruvaAnimation.isVisible ? 'animate-underline' : ''}`}>
-                  Why <span className="text-primary font-medium">Haruva</span>
-                </span>
+                Why <span className="text-primary font-medium">Haruva</span>
               </h3>
               <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
             </div>
