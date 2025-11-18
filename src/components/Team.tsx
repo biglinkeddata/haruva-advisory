@@ -46,12 +46,14 @@ const Team = () => {
                   {/* Gradient backdrop */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full blur-2xl scale-110 transition-all duration-700 group-hover/photo:from-primary/20 group-hover/photo:via-primary/10 group-hover/photo:scale-125 animate-rotate-gradient" />
                   {/* Photo */}
-                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-border shadow-lg hover:shadow-xl transition-shadow duration-500">
-                    <img 
-                      src={yossiPhoto}
-                      alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-out group-hover/photo:scale-105"
-                    />
+                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-border shadow-lg hover:shadow-xl transition-shadow duration-500 p-2 bg-background">
+                    <div className="w-full h-full rounded-full overflow-hidden">
+                      <img 
+                        src={yossiPhoto}
+                        alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
+                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-out group-hover/photo:scale-105"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
