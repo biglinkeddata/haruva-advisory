@@ -15,18 +15,15 @@ const ScrollNavigation = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        // Find the entry with the largest intersection ratio
-        const visibleEntries = entries.filter((entry) => entry.isIntersecting);
-        if (visibleEntries.length > 0) {
-          const mostVisible = visibleEntries.reduce((prev, current) => 
-            current.intersectionRatio > prev.intersectionRatio ? current : prev
-          );
-          setActiveSection(mostVisible.target.id);
-        }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+            setActiveSection(entry.target.id);
+          }
+        });
       },
       {
         threshold: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
-        rootMargin: "-20% 0px -20% 0px",
+        rootMargin: "-15% 0px -40% 0px",
       }
     );
 
