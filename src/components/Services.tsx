@@ -179,8 +179,8 @@ const Services = () => {
             opts={{
               align: "center",
               loop: true,
-              dragFree: true,
-              duration: 20,
+              dragFree: false,
+              duration: 30,
               skipSnaps: false,
             }}
           >
