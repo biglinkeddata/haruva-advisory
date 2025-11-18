@@ -93,40 +93,34 @@ const Navigation = () => {
           <div className="md:hidden pt-4 pb-3 flex flex-col gap-3">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary transition-colors text-center py-2"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary transition-colors text-center py-2"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary transition-colors text-center py-2"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("team")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary transition-colors text-center py-2"
             >
               Team
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-colors text-left py-2"
+              className="text-foreground hover:text-primary transition-colors text-center py-2"
             >
               Contact
             </button>
-            <Button 
-              onClick={() => scrollToSection("contact")} 
-              className="bg-primary text-primary-foreground hover:bg-primary/90 mt-2"
-            >
-              Get Started
-            </Button>
           </div>
         )}
       </div>
