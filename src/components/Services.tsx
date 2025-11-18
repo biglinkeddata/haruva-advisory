@@ -174,7 +174,15 @@ const Services = () => {
 
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto">
-          <Carousel className="w-full" setApi={setApi}>
+          <Carousel 
+            className="w-full" 
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: false,
+            }}
+          >
             <CarouselContent>
               {services.map((service, index) => (
                 <CarouselItem key={index}>

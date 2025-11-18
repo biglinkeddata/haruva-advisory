@@ -118,7 +118,15 @@ const Testimonials = () => {
 
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto">
-          <Carousel className="w-full" setApi={setApi}>
+          <Carousel 
+            className="w-full" 
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: false,
+            }}
+          >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index}>
