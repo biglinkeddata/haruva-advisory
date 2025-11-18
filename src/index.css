@@ -148,4 +148,19 @@ All colors MUST be HSL.
     background-size: 200% 200%;
     animation: rotate-gradient 8s ease infinite;
   }
+
+  .section-heading-underline {
+    @apply relative inline-block;
+  }
+
+  .section-heading-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 h-1 bg-primary;
+    width: 0;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section-heading-underline.animate-underline::after {
+    width: 100%;
+  }
 }
