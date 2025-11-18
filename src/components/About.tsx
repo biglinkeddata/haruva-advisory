@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import ParticleBackground from "./ParticleBackground";
 
 const About = () => {
   const titleAnimation = useScrollAnimation();
@@ -8,6 +9,9 @@ const About = () => {
     <section id="about" className="py-24 bg-card relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 opacity-80" style={{ background: 'var(--gradient-subtle)' }} />
+      
+      {/* Particle effect */}
+      <ParticleBackground />
       
       {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
