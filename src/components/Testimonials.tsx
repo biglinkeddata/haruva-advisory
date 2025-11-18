@@ -1,6 +1,7 @@
 import { Quote } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import AuroraWaves from "./AuroraWaves";
 import {
   Carousel,
   CarouselContent,
@@ -86,8 +87,9 @@ const Testimonials = () => {
   }, [api]);
   
   return (
-    <section id="testimonials" className="py-24" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="relative py-24" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
+      <AuroraWaves />
+      <div className="container mx-auto px-4 relative z-10">
         <div 
           ref={titleRef}
           className={`text-center mb-16 transition-all duration-700 ${
