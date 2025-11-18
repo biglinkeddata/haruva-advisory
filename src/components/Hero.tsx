@@ -23,10 +23,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-6 animate-fade-in">
-          <span className="text-foreground">From <span className="text-purpose">Purpose</span></span>
-          <br />
-          <span className="text-foreground">to </span>
-          <span className="text-primary font-semibold">Performance</span>
+          <span className="text-foreground">Where <span className="text-purpose">Purpose</span> becomes <span className="text-primary font-semibold">Performance</span></span>
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
           Helping purpose-driven ventures transform vision into strategy, strategy into systems, and systems into sustainable growth
