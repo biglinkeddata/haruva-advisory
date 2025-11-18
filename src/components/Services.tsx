@@ -155,9 +155,9 @@ const Services = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-light mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
             <span className="section-heading-underline animate-underline">
-              Our <span className="text-primary font-semibold">Services</span>
+              Our <span className="text-primary font-medium">Services</span>
             </span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" />

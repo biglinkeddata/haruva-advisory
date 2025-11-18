@@ -24,9 +24,9 @@ const Team = () => {
               titleAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-light mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
               <span className={`section-heading-underline ${titleAnimation.isVisible ? 'animate-underline' : ''}`}>
-                Meet the <span className="text-primary font-semibold">Team</span>
+                Meet the <span className="text-primary font-medium">Team</span>
               </span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto opacity-0" />
