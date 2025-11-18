@@ -48,7 +48,7 @@ const Team = () => {
                     <img 
                       src={yossiPhoto}
                       alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
-                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 grayscale"
                     />
                   </div>
                 </div>
