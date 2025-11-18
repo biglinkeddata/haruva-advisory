@@ -30,6 +30,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
           src={service.image} 
           alt={service.title}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
         />
       </div>
       <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">

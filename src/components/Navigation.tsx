@@ -35,6 +35,7 @@ const Navigation = () => {
               src={haruvaLogo} 
               alt="Haruva Advisory" 
               className="h-10 md:h-12 w-auto"
+              loading="eager"
             />
           </div>
 
