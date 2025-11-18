@@ -43,7 +43,7 @@ const About = () => {
           >
             <p className={`transition-all duration-700 ${
               contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            } delay-[300ms]`}>
+            } transition-delay-[300ms]`}>
               Haruva Advisory is a strategic partner to purpose-driven organisations across sustainability, wellness, 
               technology, and community-led sectors. We align purpose, strategy, and operations so performance becomes 
               predictable, grounded, and true to the organisation's identity.
@@ -51,41 +51,41 @@ const About = () => {
             
             <p className={`font-medium text-foreground transition-all duration-700 ${
               contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            } delay-[350ms]`}>Our approach is steady and practical:</p>
+            } transition-delay-[350ms]`}>Our approach is steady and practical:</p>
 
             <ul className="space-y-3 pl-6">
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-              } delay-[400ms]`}>
+              } transition-delay-[400ms]`}>
                 We diagnose what's working - and what's getting in the way
               </li>
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-              } delay-[500ms]`}>
+              } transition-delay-[500ms]`}>
                 We design clear strategies, operating models, and commercial pathways
               </li>
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-              } delay-[600ms]`}>
+              } transition-delay-[600ms]`}>
                 We deliver early execution to build momentum
               </li>
               <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-              } delay-[700ms]`}>
+              } transition-delay-[700ms]`}>
                 We develop leadership alignment and organisational rhythms that make growth sustainable
               </li>
             </ul>
 
             <p className={`transition-all duration-700 ${
               contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            } delay-[800ms]`}>
+            } transition-delay-[800ms]`}>
               We don't believe in scaling at any cost. We believe in scaling in alignment - where the way you 
               grow reflects what you stand for.
             </p>
 
             <p className={`text-foreground font-medium text-xl pt-4 transition-all duration-700 ${
               contentAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-            } delay-[900ms]`}>
+            } transition-delay-[900ms]`}>
               Growth becomes coherent, human, and sustainable.
             </p>
           </div>
@@ -109,13 +109,13 @@ const About = () => {
             }`}>
               <p className={`text-foreground font-medium transition-all duration-700 ${
                 whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-              } delay-[300ms]`}>
+              } transition-delay-[300ms]`}>
                 Haruva is a name rooted in the natural way growth unfolds.
               </p>
 
               <div className={`space-y-4 pl-4 transition-all duration-700 ${
                 whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-              } delay-[350ms]`}>
+              } transition-delay-[350ms]`}>
                 <div>
                   <p className="font-semibold text-foreground">Haru (春 / Japanese)</p>
                   <p>
@@ -135,35 +135,35 @@ const About = () => {
 
               <p className={`italic transition-all duration-700 ${
                 whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-              } delay-[450ms]`}>
+              } transition-delay-[450ms]`}>
                 Together, Haruva speaks to growth that is both true and alive - growth that emerges from alignment rather than force.
               </p>
 
               <p className={`font-medium text-foreground pt-4 transition-all duration-700 ${
                 whyHaruvaAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
-              } delay-[550ms]`}>
+              } transition-delay-[550ms]`}>
                 At Haruva Advisory, we believe that organisations scale best when:
               </p>
 
               <ul className="space-y-2 pl-6">
                 <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-                } delay-[400ms]`}>
+                } transition-delay-[400ms]`}>
                   Their purpose is clear
                 </li>
                 <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-                } delay-[500ms]`}>
+                } transition-delay-[500ms]`}>
                   Their strategy is coherent
                 </li>
                 <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-                } delay-[600ms]`}>
+                } transition-delay-[600ms]`}>
                   Their systems support their values
                 </li>
                 <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
-                } delay-[700ms]`}>
+                } transition-delay-[700ms]`}>
                   Their leaders are aligned in intention and action
                 </li>
               </ul>
