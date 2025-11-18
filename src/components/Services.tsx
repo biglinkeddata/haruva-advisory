@@ -191,20 +191,25 @@ const Services = () => {
             </CarouselContent>
           </Carousel>
           
-          {/* Pagination Dots */}
-          <div className="flex justify-center gap-2 mt-6">
-            {services.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => api?.scrollTo(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  current === index 
-                    ? 'w-8 bg-primary' 
-                    : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                }`}
-                aria-label={`Go to service ${index + 1}`}
-              />
-            ))}
+          {/* Pagination Dots with Swipe Hint */}
+          <div className="flex flex-col items-center gap-3 mt-6">
+            <p className="text-xs text-muted-foreground animate-pulse">
+              Swipe to explore →
+            </p>
+            <div className="flex justify-center gap-3">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => api?.scrollTo(index)}
+                  className={`rounded-full transition-all duration-300 touch-manipulation ${
+                    current === index 
+                      ? 'w-8 h-3 bg-primary animate-pulse' 
+                      : 'w-3 h-3 bg-muted-foreground/30 hover:bg-muted-foreground/50 active:scale-110'
+                  }`}
+                  aria-label={`Go to service ${index + 1}`}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>
