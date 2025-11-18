@@ -179,9 +179,8 @@ const Services = () => {
             opts={{
               align: "center",
               loop: true,
-              dragFree: false,
-              duration: 30,
-              skipSnaps: false,
+              dragFree: true,
+              containScroll: "trimSnaps",
             }}
           >
             <CarouselContent className="group-hover/carousel:translate-x-[-8px] transition-transform duration-500">
