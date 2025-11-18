@@ -177,7 +177,7 @@ const Services = () => {
             className="w-full group/carousel" 
             setApi={setApi}
             opts={{
-              align: "start",
+              align: "center",
               loop: true,
               dragFree: true,
               duration: 20,
