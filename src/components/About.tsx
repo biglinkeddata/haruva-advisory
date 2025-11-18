@@ -16,9 +16,12 @@ const About = () => {
       {/* Decorative elements */}
       <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
       <div className="absolute bottom-20 left-10 w-[500px] h-[500px] rounded-full bg-accent/10 blur-3xl" />
-      <div className="absolute top-1/2 left-1/4 w-3 h-3 bg-primary/40 rounded-full animate-float" />
-      <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-accent/50 rounded-full animate-float-slow" />
-      <div className="absolute bottom-1/4 right-1/4 w-2.5 h-2.5 bg-primary/40 rounded-full animate-float-slower" />
+      <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-primary rounded-full animate-float shadow-[0_0_30px_currentColor] blur-[1px]" style={{ opacity: 0.7 }} />
+      <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-accent rounded-full animate-float-slow shadow-[0_0_25px_currentColor] blur-[1px]" style={{ opacity: 0.8 }} />
+      <div className="absolute bottom-1/4 right-1/4 w-7 h-7 bg-[hsl(180,70%,55%)] rounded-full animate-float-slower shadow-[0_0_28px_currentColor] blur-[1px]" style={{ opacity: 0.75 }} />
+      <div className="absolute top-1/4 left-1/3 w-5 h-5 bg-[hsl(200,65%,60%)] rounded-full animate-float shadow-[0_0_22px_currentColor] blur-[1px]" style={{ opacity: 0.7 }} />
+      <div className="absolute bottom-1/3 left-1/2 w-6 h-6 bg-primary/90 rounded-full animate-float-slow shadow-[0_0_26px_currentColor] blur-[1px]" style={{ opacity: 0.8 }} />
+      <div className="absolute top-2/3 right-1/5 w-7 h-7 bg-accent/90 rounded-full animate-float-slower shadow-[0_0_28px_currentColor] blur-[1px]" style={{ opacity: 0.75 }} />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
