@@ -1,11 +1,11 @@
 const ParticleBackground = () => {
   const colors = [
     'bg-primary',
-    'bg-accent',
-    'bg-primary/80',
-    'bg-accent/80',
-    'bg-[hsl(180,70%,55%)]',
-    'bg-[hsl(200,65%,60%)]',
+    'bg-[hsl(150,60%,55%)]',
+    'bg-[hsl(140,65%,45%)]',
+    'bg-[hsl(170,60%,50%)]',
+    'bg-[hsl(130,55%,60%)]',
+    'bg-[hsl(145,58%,48%)]',
   ];
 
   const particles = Array.from({ length: 25 }, (_, i) => ({
