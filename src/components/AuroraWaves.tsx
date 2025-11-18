@@ -36,16 +36,6 @@ const AuroraWaves = () => {
         }}
       />
 
-      {/* Flowing lines overlay */}
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{
-          background: `
-            linear-gradient(90deg, transparent 0%, hsl(150, 70%, 50%) 50%, transparent 100%)
-          `,
-          animation: 'aurora-flow 18s linear infinite',
-        }}
-      />
     </div>
   );
 };
