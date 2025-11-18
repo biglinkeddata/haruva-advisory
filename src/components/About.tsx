@@ -36,22 +36,22 @@ const About = () => {
             <p className="font-medium text-foreground">Our approach is steady and practical:</p>
 
             <ul className="space-y-3 pl-6">
-              <li className={`list-disc transition-all duration-500 ${
+              <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
               } delay-[400ms]`}>
                 We diagnose what's working — and what's getting in the way
               </li>
-              <li className={`list-disc transition-all duration-500 ${
+              <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
               } delay-[500ms]`}>
                 We design clear strategies, operating models, and commercial pathways
               </li>
-              <li className={`list-disc transition-all duration-500 ${
+              <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
               } delay-[600ms]`}>
                 We deliver early execution to build momentum
               </li>
-              <li className={`list-disc transition-all duration-500 ${
+              <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                 contentAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
               } delay-[700ms]`}>
                 We develop leadership alignment and organisational rhythms that make growth sustainable
@@ -116,22 +116,22 @@ const About = () => {
               </p>
 
               <ul className="space-y-2 pl-6">
-                <li className={`list-disc transition-all duration-500 ${
+                <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                 } delay-[400ms]`}>
                   Their purpose is clear
                 </li>
-                <li className={`list-disc transition-all duration-500 ${
+                <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                 } delay-[500ms]`}>
                   Their strategy is coherent
                 </li>
-                <li className={`list-disc transition-all duration-500 ${
+                <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                 } delay-[600ms]`}>
                   Their systems support their values
                 </li>
-                <li className={`list-disc transition-all duration-500 ${
+                <li className={`list-disc transition-all duration-500 hover:text-foreground hover:translate-x-1 cursor-default ${
                   whyHaruvaAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-4'
                 } delay-[700ms]`}>
                   Their leaders are aligned in intention and action
