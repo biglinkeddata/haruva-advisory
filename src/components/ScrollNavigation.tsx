@@ -1,0 +1,74 @@
+import { useEffect, useState } from "react";
+
+const sections = [
+  { id: "home", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "services", label: "Services" },
+  { id: "testimonials", label: "Testimonials" },
+  { id: "contact", label: "Contact" },
+];
+
+const ScrollNavigation = () => {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.3,
+        rootMargin: "-50% 0px -50% 0px",
+      }
+    );
+
+    sections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block">
+      <ul className="flex flex-col gap-4">
+        {sections.map((section) => (
+          <li key={section.id}>
+            <button
+              onClick={() => scrollToSection(section.id)}
+              className="group relative flex items-center"
+              aria-label={`Navigate to ${section.label}`}
+            >
+              <div
+                className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${
+                  activeSection === section.id
+                    ? "bg-primary border-primary scale-125"
+                    : "bg-transparent border-muted-foreground/30 hover:border-primary/50"
+                }`}
+              />
+              <span className="absolute right-6 bg-card px-3 py-1 rounded text-sm text-foreground opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border">
+                {section.label}
+              </span>
+            </button>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+export default ScrollNavigation;
