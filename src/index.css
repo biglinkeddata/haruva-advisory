@@ -11,7 +11,7 @@ All colors MUST be HSL.
     --background: 200 20% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 200 18% 13%;
+    --card: 200 18% 15%;
     --card-foreground: 0 0% 98%;
 
     --popover: 200 18% 13%;
@@ -23,7 +23,7 @@ All colors MUST be HSL.
     --secondary: 160 20% 25%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 200 18% 16%;
+    --muted: 200 18% 20%;
     --muted-foreground: 0 0% 65%;
 
     --accent: 40 75% 55%;
@@ -41,6 +41,9 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     /* Custom design tokens */
+    --section-dark: 200 20% 8%;
+    --section-medium: 200 18% 13%;
+    --section-light: 200 18% 18%;
     --gradient-hero: linear-gradient(135deg, hsl(200 20% 10%) 0%, hsl(200 25% 15%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(168 60% 48%) 100%);
     --gradient-subtle: radial-gradient(ellipse at top, hsl(200 18% 15%) 0%, hsl(200 18% 13%) 50%, hsl(200 18% 13%) 100%);
