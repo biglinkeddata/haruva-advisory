@@ -122,6 +122,8 @@ const Testimonials = () => {
             opts={{
               align: "center",
               loop: true,
+              skipSnaps: false,
+              duration: 25,
             }}
           >
             <CarouselContent>
