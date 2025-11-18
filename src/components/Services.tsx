@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
   CarouselApi,
 } from "@/components/ui/carousel";
+import PerlinNoiseFlow from "./PerlinNoiseFlow";
 
 const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -150,6 +151,7 @@ const Services = () => {
 
   return (
     <section id="services" className="py-24 relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-light))' }}>
+      <PerlinNoiseFlow />
       {/* Subtle background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
       
