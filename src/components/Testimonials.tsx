@@ -127,6 +127,8 @@ const Testimonials = () => {
               align: "start",
               loop: true,
               dragFree: false,
+              duration: 25,
+              skipSnaps: false,
             }}
           >
             <CarouselContent className="group-hover/carousel:translate-x-[-8px] transition-transform duration-500">
