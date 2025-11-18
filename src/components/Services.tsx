@@ -133,9 +133,11 @@ const Services = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            Our <span className="text-primary font-semibold">Services</span>
+            <span className="section-heading-underline animate-underline">
+              Our <span className="text-primary font-semibold">Services</span>
+            </span>
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6" />
+          <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Tailored solutions designed to address your unique challenges and accelerate growth
           </p>

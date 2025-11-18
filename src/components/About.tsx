@@ -30,9 +30,11 @@ const About = () => {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-light mb-6">
-              About <span className="text-primary font-semibold">Haruva Advisory</span>
+              <span className={`section-heading-underline ${titleAnimation.isVisible ? 'animate-underline' : ''}`}>
+                About <span className="text-primary font-semibold">Haruva Advisory</span>
+              </span>
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-8" />
+            <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
           </div>
 
           <div 
@@ -99,9 +101,11 @@ const About = () => {
               }`}
             >
               <h3 className="text-3xl md:text-4xl font-light mb-6">
-                Why <span className="text-primary font-semibold">Haruva</span>
+                <span className={`section-heading-underline ${whyHaruvaAnimation.isVisible ? 'animate-underline' : ''}`}>
+                  Why <span className="text-primary font-semibold">Haruva</span>
+                </span>
               </h3>
-              <div className="w-20 h-1 bg-primary mx-auto mb-8" />
+              <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
             </div>
 
             <div className={`space-y-6 text-lg text-muted-foreground leading-relaxed transition-all duration-700 delay-200 ${

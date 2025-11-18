@@ -66,9 +66,11 @@ const Contact = () => {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light mb-6">
-              Let's <span className="text-primary font-semibold">Connect</span>
+              <span className="section-heading-underline animate-underline">
+                Let's <span className="text-primary font-semibold">Connect</span>
+              </span>
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6" />
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to transform your business? Get in touch to discuss how we can help you achieve your strategic goals.
             </p>

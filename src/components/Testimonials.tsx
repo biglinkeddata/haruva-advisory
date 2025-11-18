@@ -95,9 +95,11 @@ const Testimonials = () => {
           }`}
         >
           <h2 className="text-4xl md:text-5xl font-light mb-6">
-            What Our <span className="text-primary font-semibold">Clients Say</span>
+            <span className={`section-heading-underline ${titleVisible ? 'animate-underline' : ''}`}>
+              What Our <span className="text-primary font-semibold">Clients Say</span>
+            </span>
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-8" />
+          <div className="w-20 h-1 bg-primary mx-auto mb-8 opacity-0" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Trusted by purpose-driven organizations across sustainability, wellness, and technology sectors
           </p>

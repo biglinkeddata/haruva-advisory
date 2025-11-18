@@ -25,9 +25,11 @@ const Team = () => {
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-light mb-6">
-              Meet the <span className="text-primary font-semibold">Team</span>
+              <span className={`section-heading-underline ${titleAnimation.isVisible ? 'animate-underline' : ''}`}>
+                Meet the <span className="text-primary font-semibold">Team</span>
+              </span>
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto" />
+            <div className="w-20 h-1 bg-primary mx-auto opacity-0" />
           </div>
 
           {/* Team Member */}
