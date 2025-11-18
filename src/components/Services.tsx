@@ -174,7 +174,7 @@ const Services = () => {
         {/* Mobile Carousel View */}
         <div className="md:hidden max-w-sm mx-auto">
           <Carousel 
-            className="w-full" 
+            className="w-full group/carousel cursor-grab active:cursor-grabbing" 
             setApi={setApi}
             opts={{
               align: "start",
@@ -182,15 +182,13 @@ const Services = () => {
               dragFree: false,
             }}
           >
-            <CarouselContent>
+            <CarouselContent className="group-hover/carousel:translate-x-[-8px] transition-transform duration-500">
               {services.map((service, index) => (
-                <CarouselItem key={index}>
+                <CarouselItem key={index} className="group-hover/carousel:scale-[0.98] transition-transform duration-500">
                   <ServiceCard service={service} index={index} />
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 h-12 w-12 bg-background/90 hover:bg-background border-2 border-primary/20" />
-            <CarouselNext className="right-2 h-12 w-12 bg-background/90 hover:bg-background border-2 border-primary/20" />
           </Carousel>
           
           {/* Pagination Dots */}
