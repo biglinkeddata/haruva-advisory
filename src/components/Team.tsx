@@ -32,7 +32,7 @@ const Team = () => {
 
           {/* Team Member */}
           <div className="bg-card rounded-lg overflow-hidden border border-border group">
-            <div className="grid md:grid-cols-[300px_1fr] gap-8">
+            <div className="grid md:grid-cols-[240px_1fr] gap-8">
               {/* Photo */}
               <div 
                 ref={photoAnimation.elementRef}
