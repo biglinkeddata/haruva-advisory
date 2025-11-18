@@ -193,45 +193,6 @@ All colors MUST be HSL.
     }
   }
 
-  @keyframes aurora-shift {
-    0%, 100% {
-      transform: translateX(0%) translateY(0%) scale(1);
-    }
-    33% {
-      transform: translateX(-10%) translateY(10%) scale(1.1);
-    }
-    66% {
-      transform: translateX(10%) translateY(-10%) scale(0.95);
-    }
-  }
-
-  @keyframes aurora-wave {
-    0%, 100% {
-      transform: translateY(0%) scaleY(1);
-    }
-    50% {
-      transform: translateY(-15%) scaleY(1.2);
-    }
-  }
-
-  @keyframes aurora-flow {
-    0% {
-      transform: translateX(-100%) skewX(-10deg);
-    }
-    100% {
-      transform: translateX(200%) skewX(-10deg);
-    }
-  }
-
-  @keyframes aurora-pulse {
-    0%, 100% {
-      opacity: 0.15;
-    }
-    50% {
-      opacity: 0.25;
-    }
-  }
-
   @keyframes float-slow {
     0%, 100% {
       transform: translateY(0) translateX(0) scale(1);
