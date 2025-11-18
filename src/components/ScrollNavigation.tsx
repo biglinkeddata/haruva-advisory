@@ -34,8 +34,31 @@ const ScrollNavigation = () => {
       }
     });
 
-    return () => observer.disconnect();
-  }, []);
+    // Keyboard navigation
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+        e.preventDefault();
+        
+        const currentIndex = sections.findIndex(s => s.id === activeSection);
+        let nextIndex: number;
+        
+        if (e.key === "ArrowUp") {
+          nextIndex = currentIndex > 0 ? currentIndex - 1 : currentIndex;
+        } else {
+          nextIndex = currentIndex < sections.length - 1 ? currentIndex + 1 : currentIndex;
+        }
+        
+        scrollToSection(sections[nextIndex].id);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [activeSection]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
