@@ -38,7 +38,7 @@ const Team = () => {
               {/* Photo */}
               <div 
                 ref={photoAnimation.elementRef}
-                className={`flex-shrink-0 transition-all duration-700 delay-200 ${
+                className={`flex-shrink-0 p-8 transition-all duration-700 delay-200 ${
                   photoAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
               >
