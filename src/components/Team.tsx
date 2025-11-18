@@ -1,6 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import yossiPhoto from "@/assets/yossi-goldsmith.jpg";
 
 const Team = () => {
@@ -73,16 +73,26 @@ const Team = () => {
                   <p className="text-muted-foreground text-lg mb-4">
                     Strategist · Operator · Transformation Partner
                   </p>
-                  <a
-                    href="https://www.linkedin.com/in/yossigoldsmith/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                    aria-label="Connect with Yossi Goldsmith on LinkedIn"
-                  >
-                    <Linkedin size={20} />
-                    <span>Connect on LinkedIn</span>
-                  </a>
+                  <div className="flex flex-col gap-2">
+                    <a
+                      href="https://www.linkedin.com/in/yossigoldsmith/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                      aria-label="Connect with Yossi Goldsmith on LinkedIn"
+                    >
+                      <Linkedin size={20} />
+                      <span>Connect on LinkedIn</span>
+                    </a>
+                    <a
+                      href="mailto:yossi@haruvaadvisory.com"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                      aria-label="Email Yossi Goldsmith"
+                    >
+                      <Mail size={20} />
+                      <span>yossi@haruvaadvisory.com</span>
+                    </a>
+                  </div>
                 </div>
 
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
