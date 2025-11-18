@@ -14,8 +14,8 @@ const About = () => {
       <ParticleBackground />
       
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-[500px] h-[500px] rounded-full bg-accent/10 blur-3xl" />
+      <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-[hsl(155,60%,50%)]/10 blur-3xl" />
+      <div className="absolute bottom-20 left-10 w-[500px] h-[500px] rounded-full bg-[hsl(140,55%,45%)]/10 blur-3xl" />
       <div className="absolute top-1/2 left-1/4 w-8 h-8 bg-primary rounded-full animate-float-circular shadow-[0_0_30px_currentColor] blur-[1px]" style={{ opacity: 0.7 }} />
       <div className="absolute top-1/3 right-1/3 w-6 h-6 bg-[hsl(150,60%,55%)] rounded-full animate-float-diagonal shadow-[0_0_25px_currentColor] blur-[1px]" style={{ opacity: 0.8 }} />
       <div className="absolute bottom-1/4 right-1/4 w-7 h-7 bg-[hsl(140,65%,45%)] rounded-full animate-float-zigzag shadow-[0_0_28px_currentColor] blur-[1px]" style={{ opacity: 0.75 }} />
