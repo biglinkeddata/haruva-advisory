@@ -1,4 +1,5 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useCounterAnimation } from "@/hooks/useCounterAnimation";
 import { Linkedin } from "lucide-react";
 import yossiPhoto from "@/assets/yossi-goldsmith.jpg";
 
@@ -6,6 +7,11 @@ const Team = () => {
   const titleAnimation = useScrollAnimation();
   const photoAnimation = useScrollAnimation();
   const bioAnimation = useScrollAnimation();
+  const metricsAnimation = useScrollAnimation();
+
+  const yearsCount = useCounterAnimation({ end: 20, duration: 2500, isVisible: metricsAnimation.isVisible });
+  const venturesCount = useCounterAnimation({ end: 15, duration: 2500, isVisible: metricsAnimation.isVisible });
+  const sectorsCount = useCounterAnimation({ end: 5, duration: 2500, isVisible: metricsAnimation.isVisible });
 
   return (
     <section id="team" className="py-24 bg-background">
@@ -111,6 +117,39 @@ const Team = () => {
                   } delay-[1100ms]`}>
                     Haruva is where the two meet - where growth becomes grounded, coherent, and alive.
                   </p>
+
+                  {/* Metrics */}
+                  <div 
+                    ref={metricsAnimation.elementRef}
+                    className={`grid grid-cols-3 gap-6 pt-8 mt-8 border-t border-border transition-all duration-700 ${
+                      metricsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
+                  >
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-primary mb-2">
+                        {yearsCount}+
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        Years of Experience
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-primary mb-2">
+                        {venturesCount}+
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        Ventures Scaled
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-primary mb-2">
+                        {sectorsCount}+
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        Key Sectors
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
