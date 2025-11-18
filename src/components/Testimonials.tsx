@@ -1,5 +1,5 @@
 import { Quote } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
   Carousel,
@@ -9,7 +9,6 @@ import {
   CarouselPrevious,
   CarouselApi,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 const testimonials = [
   {
@@ -75,9 +74,6 @@ const Testimonials = () => {
   const { elementRef: titleRef, isVisible: titleVisible } = useScrollAnimation();
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const autoplayPlugin = useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  );
 
   useEffect(() => {
     if (!api) return;
@@ -123,7 +119,6 @@ const Testimonials = () => {
           <Carousel 
             className="w-full group/carousel cursor-grab active:cursor-grabbing" 
             setApi={setApi}
-            plugins={[autoplayPlugin.current]}
             opts={{
               align: "start",
               loop: true,
