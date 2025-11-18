@@ -14,7 +14,7 @@ const Team = () => {
   const sectorsCount = useCounterAnimation({ end: 5, duration: 2500, isVisible: metricsAnimation.isVisible });
 
   return (
-    <section id="team" className="py-24 bg-background">
+    <section id="team" className="py-24" style={{ backgroundColor: 'hsl(var(--section-dark))' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section Title */}

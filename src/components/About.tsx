@@ -6,7 +6,7 @@ const About = () => {
   const contentAnimation = useScrollAnimation();
   const whyHaruvaAnimation = useScrollAnimation();
   return (
-    <section id="about" className="py-24 bg-card relative overflow-hidden">
+    <section id="about" className="py-24 relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
       {/* Background gradient */}
       <div className="absolute inset-0 opacity-80" style={{ background: 'var(--gradient-subtle)' }} />
       

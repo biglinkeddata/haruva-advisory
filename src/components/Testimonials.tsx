@@ -86,7 +86,7 @@ const Testimonials = () => {
   }, [api]);
   
   return (
-    <section id="testimonials" className="py-24 bg-background">
+    <section id="testimonials" className="py-24" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
       <div className="container mx-auto px-4">
         <div 
           ref={titleRef}
