@@ -22,10 +22,10 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-6 animate-fade-in">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-light mb-8 animate-fade-in leading-tight tracking-tight">
           <span className="text-foreground">Where <span className="text-purpose">Purpose</span> becomes <span className="text-primary font-semibold">Performance</span></span>
         </h1>
-        <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
+        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
           Helping purpose-driven ventures transform vision into strategy, strategy into systems, and systems into sustainable growth
         </p>
       </div>
