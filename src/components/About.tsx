@@ -6,8 +6,17 @@ const About = () => {
   const whyHaruvaAnimation = useScrollAnimation();
   return (
     <section id="about" className="py-24 bg-card relative overflow-hidden">
+      {/* Background gradient */}
       <div className="absolute inset-0 opacity-60" style={{ background: 'var(--gradient-subtle)' }} />
-        <div className="max-w-4xl mx-auto">
+      
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-10 w-64 h-64 rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute bottom-40 left-10 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
+      <div className="absolute top-1/2 left-1/4 w-2 h-2 bg-primary/20 rounded-full" />
+      <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent/30 rounded-full" />
+      <div className="absolute bottom-1/4 right-1/4 w-1.5 h-1.5 bg-primary/25 rounded-full" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* About Section */}
           <div 
