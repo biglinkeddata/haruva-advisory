@@ -32,26 +32,27 @@ const Team = () => {
 
           {/* Team Member */}
           <div className="bg-card rounded-lg overflow-hidden border border-border group">
-            <div className="grid md:grid-cols-[240px_1fr] gap-8">
+            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               {/* Photo */}
               <div 
                 ref={photoAnimation.elementRef}
-                className={`relative h-64 md:h-auto transition-all duration-700 delay-200 ${
+                className={`flex-shrink-0 transition-all duration-700 delay-200 ${
                   photoAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
               >
-                <img 
-                  src={yossiPhoto}
-                  alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
-                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent md:hidden" />
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-border">
+                  <img 
+                    src={yossiPhoto}
+                    alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  />
+                </div>
               </div>
 
               {/* Content */}
               <div 
                 ref={bioAnimation.elementRef}
-                className={`p-8 md:py-12 transition-all duration-700 delay-400 ${
+                className={`flex-1 p-8 md:py-12 md:pr-12 md:pl-0 transition-all duration-700 delay-400 ${
                   bioAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'
                 }`}
               >
