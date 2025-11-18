@@ -178,7 +178,7 @@ const Services = () => {
           <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
           
           <Carousel 
-            className="w-full group/carousel cursor-grab active:cursor-grabbing" 
+            className="w-full group/carousel" 
             setApi={setApi}
             opts={{
               align: "start",
