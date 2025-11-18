@@ -40,7 +40,7 @@ const Team = () => {
                   photoAnimation.isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
                 }`}
               >
-                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-border">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-border shadow-lg hover:shadow-xl transition-shadow duration-500">
                   <img 
                     src={yossiPhoto}
                     alt="Yossi Goldsmith - Strategist, Operator, Transformation Partner"
