@@ -4,6 +4,15 @@ import brandPartnership from "@/assets/brand-partnership.jpg";
 import leadershipAlignment from "@/assets/leadership-alignment.jpg";
 import transformationIntegration from "@/assets/transformation-integration.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useState, useEffect } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  CarouselApi,
+} from "@/components/ui/carousel";
 
 const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -56,6 +65,19 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
 };
 
 const Services = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   const services = [
     {
       image: strategyCommercial,
@@ -143,10 +165,42 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Desktop Grid View */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} index={index} />
           ))}
+        </div>
+
+        {/* Mobile Carousel View */}
+        <div className="md:hidden max-w-sm mx-auto">
+          <Carousel className="w-full" setApi={setApi}>
+            <CarouselContent>
+              {services.map((service, index) => (
+                <CarouselItem key={index}>
+                  <ServiceCard service={service} index={index} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+          
+          {/* Pagination Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {services.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all duration-300 ${
+                  current === index 
+                    ? 'w-8 bg-primary' 
+                    : 'w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50'
+                }`}
+                aria-label={`Go to service ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
