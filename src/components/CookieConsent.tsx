@@ -18,6 +18,30 @@ interface CookiePreferences {
   marketing: boolean;
 }
 
+// Declare gtag function for TypeScript
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+    dataLayer: any[];
+  }
+}
+
+const enableGoogleAnalytics = () => {
+  if (window.gtag) {
+    window.gtag('consent', 'update', {
+      'analytics_storage': 'granted'
+    });
+  }
+};
+
+const disableGoogleAnalytics = () => {
+  if (window.gtag) {
+    window.gtag('consent', 'update', {
+      'analytics_storage': 'denied'
+    });
+  }
+};
+
 export const CookieConsent = () => {
   const [showBanner, setShowBanner] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
@@ -30,7 +54,17 @@ export const CookieConsent = () => {
   useEffect(() => {
     const consent = localStorage.getItem("cookieConsent");
     if (!consent) {
+      // Block GA by default until consent is given
+      disableGoogleAnalytics();
       setShowBanner(true);
+    } else {
+      // Apply saved preferences
+      const savedPreferences = JSON.parse(consent) as CookiePreferences;
+      if (savedPreferences.analytics) {
+        enableGoogleAnalytics();
+      } else {
+        disableGoogleAnalytics();
+      }
     }
   }, []);
 
@@ -41,6 +75,7 @@ export const CookieConsent = () => {
       marketing: true,
     };
     localStorage.setItem("cookieConsent", JSON.stringify(allAccepted));
+    enableGoogleAnalytics();
     setShowBanner(false);
   };
 
@@ -51,11 +86,17 @@ export const CookieConsent = () => {
       marketing: false,
     };
     localStorage.setItem("cookieConsent", JSON.stringify(onlyNecessary));
+    disableGoogleAnalytics();
     setShowBanner(false);
   };
 
   const handleSavePreferences = () => {
     localStorage.setItem("cookieConsent", JSON.stringify(preferences));
+    if (preferences.analytics) {
+      enableGoogleAnalytics();
+    } else {
+      disableGoogleAnalytics();
+    }
     setShowPreferences(false);
     setShowBanner(false);
   };
