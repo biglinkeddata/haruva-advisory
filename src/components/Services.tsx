@@ -18,6 +18,17 @@ import PerlinNoiseFlow from "./PerlinNoiseFlow";
 const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   const { elementRef, isVisible } = useScrollAnimation();
   
+  // Track service view when it becomes visible
+  useEffect(() => {
+    if (isVisible && window.gtag) {
+      window.gtag('event', 'service_view', {
+        event_category: 'engagement',
+        event_label: service.title,
+        value: index + 1
+      });
+    }
+  }, [isVisible, service.title, index]);
+  
   return (
     <div
       ref={elementRef}

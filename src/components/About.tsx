@@ -1,10 +1,22 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useEffect } from "react";
 import ParticleBackground from "./ParticleBackground";
 
 const About = () => {
   const titleAnimation = useScrollAnimation();
   const contentAnimation = useScrollAnimation();
   const whyHaruvaAnimation = useScrollAnimation();
+  
+  // Track section view when it becomes visible
+  useEffect(() => {
+    if (titleAnimation.isVisible && window.gtag) {
+      window.gtag('event', 'section_view', {
+        event_category: 'engagement',
+        event_label: 'About Haruva Advisory'
+      });
+    }
+  }, [titleAnimation.isVisible]);
+  
   return (
     <section id="about" className="py-24 relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
       {/* Background gradient */}

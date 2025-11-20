@@ -41,6 +41,14 @@ const Contact = () => {
       });
 
       if (response.ok) {
+        // Track successful form submission
+        if (window.gtag) {
+          window.gtag('event', 'contact_form_submit', {
+            event_category: 'engagement',
+            event_label: 'Contact Form'
+          });
+        }
+        
         toast({
           title: "Message sent!",
           description: "Thank you for reaching out. We'll get back to you soon.",

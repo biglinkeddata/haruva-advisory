@@ -1,5 +1,6 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useCounterAnimation } from "@/hooks/useCounterAnimation";
+import { useEffect } from "react";
 import { Linkedin, Mail } from "lucide-react";
 import yossiPhoto from "@/assets/yossi-goldsmith.jpg";
 
@@ -12,6 +13,16 @@ const Team = () => {
   const yearsCount = useCounterAnimation({ end: 20, duration: 2500, isVisible: metricsAnimation.isVisible });
   const venturesCount = useCounterAnimation({ end: 15, duration: 2500, isVisible: metricsAnimation.isVisible });
   const sectorsCount = useCounterAnimation({ end: 5, duration: 2500, isVisible: metricsAnimation.isVisible });
+
+  // Track section view when it becomes visible
+  useEffect(() => {
+    if (titleAnimation.isVisible && window.gtag) {
+      window.gtag('event', 'section_view', {
+        event_category: 'engagement',
+        event_label: 'Team'
+      });
+    }
+  }, [titleAnimation.isVisible]);
 
   return (
     <section id="team" className="py-24" style={{ backgroundColor: 'hsl(var(--section-dark))' }}>
