@@ -46,6 +46,17 @@ const testimonials = [
 const TestimonialCard = ({ testimonial, index }: { testimonial: typeof testimonials[0]; index: number }) => {
   const { elementRef, isVisible } = useScrollAnimation();
   
+  // Track testimonial view when it becomes visible
+  useEffect(() => {
+    if (isVisible && window.gtag) {
+      window.gtag('event', 'testimonial_view', {
+        event_category: 'engagement',
+        event_label: testimonial.author,
+        value: index + 1
+      });
+    }
+  }, [isVisible, testimonial.author, index]);
+  
   return (
     <div
       ref={elementRef}
