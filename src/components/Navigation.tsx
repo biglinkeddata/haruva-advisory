@@ -43,31 +43,31 @@ const Navigation = () => {
           <div className="hidden md:flex items-center gap-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("team")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               Team
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-colors"
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
               Contact
             </button>
@@ -84,34 +84,34 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-3 flex flex-col gap-3">
+          <div className="md:hidden pt-4 pb-3 flex flex-col gap-2 animate-fade-in">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-primary transition-colors text-center py-2"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary transition-colors text-center py-2"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-primary transition-colors text-center py-2"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("team")}
-              className="text-foreground hover:text-primary transition-colors text-center py-2"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
             >
               Team
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary transition-colors text-center py-2"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
             >
               Contact
             </button>
