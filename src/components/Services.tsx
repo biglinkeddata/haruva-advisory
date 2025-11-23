@@ -146,20 +146,6 @@ const Services = () => {
       outcome: "A leadership team that moves as one."
     },
     {
-      image: transformationIntegration,
-      title: "Transformation Integration",
-      subtitle: "Embedding change that lasts.",
-      description: "This is where the new way of working becomes part of the organisation's identity - where habits shift, behaviour aligns, and the culture holds the growth without constant effort or external push.",
-      focusAreas: [
-        "Cultural anchoring & behavioural integration",
-        "Leadership modelling & communication practices",
-        "Rituals, rhythms, and reinforcement structures",
-        "Identity narrative alignment (internal / external)",
-        "Capability and capacity building"
-      ],
-      outcome: "Sustainable transformation - where growth feels natural, embodied, and self-renewing."
-    },
-    {
       image: experientialRetreat,
       title: "Experiential Design & Retreat Facilitation",
       subtitle: "Creating immersive spaces for clarity, alignment, and renewed direction.",
@@ -172,6 +158,20 @@ const Services = () => {
         "Team cohesion, alignment, and reflective practices"
       ],
       outcome: "Immersive experiences that shift perspective, strengthen relationships, and create the clarity and momentum needed for the next stage of growth."
+    },
+    {
+      image: transformationIntegration,
+      title: "Transformation Integration",
+      subtitle: "Embedding change that lasts.",
+      description: "This is where the new way of working becomes part of the organisation's identity - where habits shift, behaviour aligns, and the culture holds the growth without constant effort or external push.",
+      focusAreas: [
+        "Cultural anchoring & behavioural integration",
+        "Leadership modelling & communication practices",
+        "Rituals, rhythms, and reinforcement structures",
+        "Identity narrative alignment (internal / external)",
+        "Capability and capacity building"
+      ],
+      outcome: "Sustainable transformation - where growth feels natural, embodied, and self-renewing."
     }
   ];
 
