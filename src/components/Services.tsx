@@ -33,7 +33,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   return (
     <div
       ref={elementRef}
-      className={`group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-700 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] ${
+      className={`group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-700 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] h-full flex flex-col ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
@@ -56,7 +56,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
         {service.description}
       </p>
       {service.focusAreas && (
-        <div className="mb-4">
+        <div className="mb-4 flex-grow">
           <p className="text-sm font-semibold text-foreground mb-2">Focus Areas:</p>
           <ul className="text-sm text-muted-foreground space-y-1">
             {service.focusAreas.map((area: string, idx: number) => (
