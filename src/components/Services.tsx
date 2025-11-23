@@ -3,6 +3,7 @@ import operationalTransformation from "@/assets/operational-transformation.jpg";
 import brandPartnership from "@/assets/brand-partnership.jpg";
 import leadershipAlignment from "@/assets/leadership-alignment.jpg";
 import transformationIntegration from "@/assets/transformation-integration.jpg";
+import experientialRetreat from "@/assets/experiential-retreat.jpg";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { useState, useEffect } from "react";
 import {
@@ -157,6 +158,20 @@ const Services = () => {
         "Capability and capacity building"
       ],
       outcome: "Sustainable transformation - where growth feels natural, embodied, and self-renewing."
+    },
+    {
+      image: experientialRetreat,
+      title: "Experiential Design & Retreat Facilitation",
+      subtitle: "Creating immersive spaces for clarity, alignment, and renewed direction.",
+      description: "This is where leaders step out of the noise, reconnect to what matters, and engage in the kind of deep work that cannot happen inside everyday operations. Through intentional design, grounded facilitation, and seamless execution, we craft experiences that catalyse insight, cohesion, and meaningful transformation.",
+      focusAreas: [
+        "Retreat and offsite design aligned to strategic intent",
+        "Narrative, flow and content architecture",
+        "End-to-end production, logistics, and guest experience",
+        "Leadership facilitation and group process design",
+        "Team cohesion, alignment, and reflective practices"
+      ],
+      outcome: "Immersive experiences that shift perspective, strengthen relationships, and create the clarity and momentum needed for the next stage of growth."
     }
   ];
 
