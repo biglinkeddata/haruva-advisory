@@ -82,36 +82,49 @@ const Navigation = () => {
           </button>
         </nav>
 
+        {/* Mobile Menu Backdrop */}
+        {isMenuOpen && (
+          <div 
+            className="fixed inset-0 bg-background/80 backdrop-blur-md md:hidden z-[-1] animate-fade-in"
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden pt-4 pb-3 flex flex-col gap-2 animate-fade-in">
+          <div className="md:hidden pt-4 pb-6 flex flex-col gap-2 animate-slide-in-top">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '50ms' }}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '100ms' }}
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '150ms' }}
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("team")}
-              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '200ms' }}
             >
               Team
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium"
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '250ms' }}
             >
               Contact
             </button>
