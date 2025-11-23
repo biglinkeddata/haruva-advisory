@@ -149,7 +149,7 @@ const Services = () => {
       image: experientialRetreat,
       title: "Experiential Design & Retreat Facilitation",
       subtitle: "Creating immersive spaces for clarity, alignment, and renewed direction.",
-      description: "This is where leaders step out of the noise, reconnect to what matters, and engage in the kind of deep work that cannot happen inside everyday operations. Through intentional design, grounded facilitation, and seamless execution, we craft experiences that catalyse insight, cohesion, and meaningful transformation.",
+      description: "This is where leaders step out of the noise and into intentional environments designed for deep reflection and meaningful change. Through crafted experiences, grounded facilitation, and seamless delivery, we create the conditions for insight, cohesion, and renewed perspective.",
       focusAreas: [
         "Retreat and offsite design aligned to strategic intent",
         "Narrative, flow and content architecture",
@@ -157,7 +157,7 @@ const Services = () => {
         "Leadership facilitation and group process design",
         "Team cohesion, alignment, and reflective practices"
       ],
-      outcome: "Immersive experiences that shift perspective, strengthen relationships, and create the clarity and momentum needed for the next stage of growth."
+      outcome: "Experiences that shift perspective, strengthen relationships, and generate the clarity and momentum needed for the next stage of growth."
     },
     {
       image: transformationIntegration,
