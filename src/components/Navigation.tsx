@@ -71,12 +71,6 @@ const Navigation = () => {
             >
               Contact
             </button>
-            <Button 
-              onClick={() => scrollToSection("contact")} 
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile Menu Button */}
