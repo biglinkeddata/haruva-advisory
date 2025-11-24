@@ -18,27 +18,15 @@ const Hero = () => {
           {/* Fallback for browsers that don't support video */}
           Your browser does not support the video tag.
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/80 backdrop-blur-[1px]" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-background/60" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-normal mb-8 leading-tight tracking-tight">
-          <span className="inline-block animate-fade-in text-foreground drop-shadow-lg" style={{ animationDelay: '0.1s', opacity: 0, animationFillMode: 'forwards' }}>
-            Where{' '}
-          </span>
-          <span className="inline-block animate-fade-in text-purpose drop-shadow-lg font-medium" style={{ animationDelay: '0.3s', opacity: 0, animationFillMode: 'forwards' }}>
-            Purpose
-          </span>
-          <span className="inline-block animate-fade-in text-foreground drop-shadow-lg" style={{ animationDelay: '0.5s', opacity: 0, animationFillMode: 'forwards' }}>
-            {' '}becomes{' '}
-          </span>
-          <span className="inline-block animate-fade-in text-primary font-medium drop-shadow-lg animate-pulse-glow" style={{ animationDelay: '0.7s', opacity: 0, animationFillMode: 'forwards' }}>
-            Performance
-          </span>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-normal mb-8 animate-fade-in leading-tight tracking-tight">
+          <span className="text-foreground">Where <span className="text-purpose">Purpose</span> becomes <span className="text-primary font-medium">Performance</span></span>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed animate-fade-in drop-shadow-md" style={{ animationDelay: '0.9s', opacity: 0, animationFillMode: 'forwards' }}>
+        <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
           Helping purpose-driven ventures transform vision into strategy, strategy into systems, and systems into sustainable growth
         </p>
       </div>
