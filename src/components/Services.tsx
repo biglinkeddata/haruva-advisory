@@ -149,7 +149,7 @@ const Services = () => {
       image: experientialRetreat,
       title: "Experiential Design & Retreat Facilitation",
       subtitle: "Immersive spaces for clarity and renewed direction.",
-      description: "We design and facilitate retreats and offsites that create the conditions for reflection, alignment, and meaningful progress — combining intentional design, grounded facilitation, and seamless delivery.",
+      description: "We design and facilitate retreats and offsites that create the conditions for reflection, alignment, and meaningful progress - combining intentional design, grounded facilitation, and seamless delivery.",
       focusAreas: [
         "Retreat and offsite design",
         "Narrative, flow, and content architecture",
