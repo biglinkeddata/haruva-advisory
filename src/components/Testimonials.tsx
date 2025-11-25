@@ -97,8 +97,14 @@ const Testimonials = () => {
   }, [api]);
   
   return (
-    <section id="testimonials" className="py-24" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
-      <div className="container mx-auto px-4">
+    <section id="testimonials" className="py-24 relative" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
+      {/* Top gradient transition from Team */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
+      
+      {/* Bottom gradient transition to Contact */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(var(--section-light))] pointer-events-none z-10" />
+      
+      <div className="container mx-auto px-4 relative z-20">
         <div 
           ref={titleRef}
           className={`text-center mb-16 transition-all duration-700 ${
