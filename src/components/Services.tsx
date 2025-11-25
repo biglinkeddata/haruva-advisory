@@ -176,15 +176,9 @@ const Services = () => {
 
   return (
     <section id="services" className="py-24 relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-light))' }}>
-      {/* Top gradient transition from About */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[hsl(var(--section-medium))] to-transparent pointer-events-none z-20" />
-      
       <PerlinNoiseFlow />
       {/* Subtle background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
-      
-      {/* Bottom gradient transition to Team */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-white pointer-events-none z-20" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">

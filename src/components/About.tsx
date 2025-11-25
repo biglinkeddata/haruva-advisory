@@ -19,14 +19,8 @@ const About = () => {
   
   return (
     <section id="about" className="py-24 relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-medium))' }}>
-      {/* Top gradient transition from Hero */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[hsl(var(--background))] to-transparent pointer-events-none z-20" />
-      
       {/* Background gradient */}
       <div className="absolute inset-0 opacity-80" style={{ background: 'var(--gradient-subtle)' }} />
-      
-      {/* Bottom gradient transition to Services */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(var(--section-light))] pointer-events-none z-20" />
       
       {/* Particle effect */}
       <ParticleBackground />

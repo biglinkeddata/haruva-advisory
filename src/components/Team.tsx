@@ -25,14 +25,8 @@ const Team = () => {
   }, [titleAnimation.isVisible]);
 
   return (
-    <section id="team" className="py-24 bg-white relative">
-      {/* Top gradient transition from Services */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[hsl(var(--section-light))] to-transparent pointer-events-none z-10" />
-      
-      {/* Bottom gradient transition to Testimonials */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(var(--section-medium))] pointer-events-none z-10" />
-      
-      <div className="container mx-auto px-4 relative z-20">
+    <section id="team" className="py-24" style={{ backgroundColor: 'hsl(var(--section-dark))' }}>
+      <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section Title */}
           <div 
@@ -41,14 +35,14 @@ const Team = () => {
               titleAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6 text-gray-900">
+            <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
               Meet the <span className="text-primary font-medium">Team</span>
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto opacity-0" />
           </div>
 
           {/* Team Member */}
-          <div className="bg-gray-50 rounded-lg overflow-hidden border border-gray-200 group">
+          <div className="bg-card rounded-lg overflow-hidden border border-border group">
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
               {/* Photo */}
               <div 
@@ -61,7 +55,7 @@ const Team = () => {
                   {/* Gradient backdrop */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-full blur-2xl scale-110 transition-all duration-700 group-hover/photo:from-primary/20 group-hover/photo:via-primary/10 group-hover/photo:scale-125 animate-rotate-gradient" />
                   {/* Photo */}
-                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-500 p-4 bg-white">
+                  <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-border shadow-lg hover:shadow-xl transition-shadow duration-500 p-4 bg-background">
                     <div className="w-full h-full rounded-full overflow-hidden">
                       <img 
                         src={yossiPhoto}
@@ -82,10 +76,10 @@ const Team = () => {
                 }`}
               >
                 <div className="mb-4">
-                  <h3 className="text-3xl font-heading font-semibold text-gray-900 mb-2">
+                  <h3 className="text-3xl font-heading font-semibold text-foreground mb-2">
                     Yossi Goldsmith
                   </h3>
-                  <p className="text-gray-600 text-lg mb-4">
+                  <p className="text-muted-foreground text-lg mb-4">
                     Strategist · Operator · Transformation Partner
                   </p>
                   <div className="flex flex-col gap-2">
@@ -110,7 +104,7 @@ const Team = () => {
                   </div>
                 </div>
 
-                <div className="space-y-4 text-gray-700 leading-relaxed">
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   } transition-delay-[500ms]`}>
@@ -132,7 +126,7 @@ const Team = () => {
                   <p className={`transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   } transition-delay-[800ms]`}>
-                    I founded Haruva to bring together what I've learned from years of working inside and alongside purpose-driven ventures: <span className="font-medium text-gray-900">that true speed comes from alignment.</span>
+                    I founded Haruva to bring together what I've learned from years of working inside and alongside purpose-driven ventures: <span className="font-medium text-foreground">that true speed comes from alignment.</span>
                   </p>
 
                   <p className={`transition-all duration-500 ${
@@ -148,7 +142,7 @@ const Team = () => {
                     And alignment without momentum is stagnation.
                   </p>
 
-                  <p className={`font-medium text-gray-900 text-lg pt-2 transition-all duration-500 ${
+                  <p className={`font-medium text-foreground text-lg pt-2 transition-all duration-500 ${
                     bioAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   } transition-delay-[1100ms]`}>
                     Haruva is where the two meet - where growth becomes grounded, coherent, and alive.
@@ -157,7 +151,7 @@ const Team = () => {
                   {/* Metrics */}
                   <div 
                     ref={metricsAnimation.elementRef}
-                    className={`grid grid-cols-3 gap-6 pt-8 mt-8 border-t border-gray-200 transition-all duration-700 ${
+                    className={`grid grid-cols-3 gap-6 pt-8 mt-8 border-t border-border transition-all duration-700 ${
                       metricsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}
                   >
@@ -165,7 +159,7 @@ const Team = () => {
                       <div className="text-4xl font-bold text-primary mb-2">
                         {yearsCount}+
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-muted-foreground">
                         Years of Experience
                       </div>
                     </div>
@@ -173,7 +167,7 @@ const Team = () => {
                       <div className="text-4xl font-bold text-primary mb-2">
                         {venturesCount}+
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-muted-foreground">
                         Ventures Scaled
                       </div>
                     </div>
@@ -181,7 +175,7 @@ const Team = () => {
                       <div className="text-4xl font-bold text-primary mb-2">
                         {sectorsCount}+
                       </div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-sm text-muted-foreground">
                         Key Sectors
                       </div>
                     </div>
