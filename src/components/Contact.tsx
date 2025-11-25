@@ -69,8 +69,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24" style={{ backgroundColor: 'hsl(var(--section-light))' }}>
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-24 relative" style={{ backgroundColor: 'hsl(var(--section-light))' }}>
+      {/* Top gradient transition from Testimonials */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[hsl(var(--section-medium))] to-transparent pointer-events-none z-10" />
+      
+      <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">

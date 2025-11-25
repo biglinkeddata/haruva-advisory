@@ -25,8 +25,14 @@ const Team = () => {
   }, [titleAnimation.isVisible]);
 
   return (
-    <section id="team" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="team" className="py-24 bg-white relative">
+      {/* Top gradient transition from Services */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[hsl(var(--section-light))] to-transparent pointer-events-none z-10" />
+      
+      {/* Bottom gradient transition to Testimonials */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(var(--section-medium))] pointer-events-none z-10" />
+      
+      <div className="container mx-auto px-4 relative z-20">
         <div className="max-w-5xl mx-auto">
           {/* Section Title */}
           <div 

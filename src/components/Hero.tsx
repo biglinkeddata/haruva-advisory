@@ -1,6 +1,8 @@
 const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Bottom gradient transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(var(--section-medium))] z-10 pointer-events-none" />
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
