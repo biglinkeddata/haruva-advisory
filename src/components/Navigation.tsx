@@ -25,57 +25,60 @@ const Navigation = () => {
   };
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || isMenuOpen ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'
-      }`}
-      role="banner"
-    >
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled || isMenuOpen ? 'bg-background/95 backdrop-blur-sm border-b border-border' : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4 py-6">
-        <nav className="flex items-center justify-between" role="navigation" aria-label="Main navigation">
-          <a 
-            href="#home" 
-            onClick={(e) => { e.preventDefault(); scrollToSection("home"); }}
-            className="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md"
-          >
+        <nav className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
             <img 
               src={haruvaLogo} 
-              alt="Haruva Advisory - Home" 
+              alt="Haruva Advisory" 
               className="h-10 md:h-12 w-auto"
               loading="eager"
             />
-          </a>
+          </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-8" role="menubar">
-            {[
-              { id: "home", label: "Home" },
-              { id: "about", label: "About" },
-              { id: "services", label: "Services" },
-              { id: "team", label: "Team" },
-              { id: "contact", label: "Contact" },
-            ].map((item) => (
-              <li key={item.id} role="none">
-                <button
-                  onClick={() => scrollToSection(item.id)}
-                  role="menuitem"
-                  className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-sm px-1"
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center gap-8">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Home
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("team")}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Team
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="relative text-foreground/80 hover:text-primary transition-all duration-300 font-medium text-sm after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+            >
+              Contact
+            </button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-md p-1"
+            className="md:hidden text-foreground"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-expanded={isMenuOpen}
-            aria-controls="mobile-menu"
-            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           >
-            {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </nav>
 
@@ -89,28 +92,43 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav 
-            id="mobile-menu" 
-            className="md:hidden pt-4 pb-6 flex flex-col gap-2 animate-slide-in-top"
-            aria-label="Mobile navigation"
-          >
-            {[
-              { id: "home", label: "Home", delay: "50ms" },
-              { id: "about", label: "About", delay: "100ms" },
-              { id: "services", label: "Services", delay: "150ms" },
-              { id: "team", label: "Team", delay: "200ms" },
-              { id: "contact", label: "Contact", delay: "250ms" },
-            ].map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
-                style={{ animationDelay: item.delay }}
-              >
-                {item.label}
-              </button>
-            ))}
-          </nav>
+          <div className="md:hidden pt-4 pb-6 flex flex-col gap-2 animate-slide-in-top">
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '50ms' }}
+            >
+              Home
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '100ms' }}
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '150ms' }}
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("team")}
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '200ms' }}
+            >
+              Team
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-foreground/80 hover:text-primary hover:bg-primary/5 transition-all duration-300 text-center py-3 rounded-md font-medium transform hover:scale-105"
+              style={{ animationDelay: '250ms' }}
+            >
+              Contact
+            </button>
+          </div>
         )}
       </div>
     </header>

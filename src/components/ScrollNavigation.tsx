@@ -71,19 +71,14 @@ const ScrollNavigation = () => {
   };
 
   return (
-    <nav 
-      className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block"
-      aria-label="Page sections"
-      role="navigation"
-    >
-      <ul className="flex flex-col gap-4" role="list">
+    <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-50 hidden md:block">
+      <ul className="flex flex-col gap-4">
         {sections.map((section) => (
-          <li key={section.id} role="listitem">
+          <li key={section.id}>
             <button
               onClick={() => scrollToSection(section.id)}
-              className="group relative flex items-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded-full p-1"
-              aria-label={`Navigate to ${section.label} section`}
-              aria-current={activeSection === section.id ? "true" : undefined}
+              className="group relative flex items-center"
+              aria-label={`Navigate to ${section.label}`}
             >
               <div
                 className={`w-3 h-3 rounded-full border-2 transition-all duration-300 ${
@@ -91,12 +86,8 @@ const ScrollNavigation = () => {
                     ? "bg-primary border-primary scale-125"
                     : "bg-transparent border-muted-foreground/30 hover:border-primary/50"
                 }`}
-                aria-hidden="true"
               />
-              <span 
-                className="absolute right-6 bg-card px-3 py-1 rounded text-sm text-foreground opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity whitespace-nowrap border border-border"
-                aria-hidden="true"
-              >
+              <span className="absolute right-6 bg-card px-3 py-1 rounded text-sm text-foreground opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border">
                 {section.label}
               </span>
             </button>

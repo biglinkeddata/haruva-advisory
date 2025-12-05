@@ -69,47 +69,31 @@ const Contact = () => {
   };
 
   return (
-    <section 
-      id="contact" 
-      className="py-24" 
-      style={{ backgroundColor: 'hsl(var(--section-light))' }}
-      aria-labelledby="contact-heading"
-    >
+    <section id="contact" className="py-24" style={{ backgroundColor: 'hsl(var(--section-light))' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-16">
-            <h2 id="contact-heading" className="text-4xl md:text-5xl font-heading font-normal mb-6">
+            <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
               Let's <span className="text-primary font-medium">Connect</span>
             </h2>
-            <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" aria-hidden="true" />
+            <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" />
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Ready to transform your business? Get in touch to discuss how we can help you achieve your strategic goals.
             </p>
           </div>
 
-          <form 
-            onSubmit={handleSubmit(onSubmit)} 
-            className="space-y-6"
-            aria-label="Contact form"
-            noValidate
-          >
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="email">Your Email</Label>
               <Input
                 id="email"
                 type="email"
                 placeholder="your@email.com"
-                autoComplete="email"
-                aria-required="true"
-                aria-invalid={!!errors.email}
-                aria-describedby={errors.email ? "email-error" : undefined}
                 {...register("email")}
-                className={`${errors.email ? "border-destructive" : ""} focus:ring-2 focus:ring-primary`}
+                className={errors.email ? "border-destructive" : ""}
               />
               {errors.email && (
-                <p id="email-error" className="text-sm text-destructive" role="alert">
-                  {errors.email.message}
-                </p>
+                <p className="text-sm text-destructive">{errors.email.message}</p>
               )}
             </div>
 
@@ -119,16 +103,11 @@ const Contact = () => {
                 id="message"
                 placeholder="Tell us about your needs..."
                 rows={6}
-                aria-required="true"
-                aria-invalid={!!errors.message}
-                aria-describedby={errors.message ? "message-error" : undefined}
                 {...register("message")}
-                className={`${errors.message ? "border-destructive" : ""} focus:ring-2 focus:ring-primary`}
+                className={errors.message ? "border-destructive" : ""}
               />
               {errors.message && (
-                <p id="message-error" className="text-sm text-destructive" role="alert">
-                  {errors.message.message}
-                </p>
+                <p className="text-sm text-destructive">{errors.message.message}</p>
               )}
             </div>
 
@@ -138,7 +117,6 @@ const Contact = () => {
                 size="lg"
                 disabled={isSubmitting}
                 className="px-8"
-                aria-disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>

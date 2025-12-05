@@ -31,26 +31,22 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
   }, [isVisible, service.title, index]);
   
   return (
-    <article
+    <div
       ref={elementRef}
       className={`group bg-card border border-border rounded-lg p-8 hover:border-primary/50 transition-all duration-700 hover:shadow-[0_0_30px_rgba(var(--primary),0.1)] h-full flex flex-col ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       style={{ transitionDelay: `${index * 150}ms` }}
-      aria-labelledby={`service-title-${index}`}
     >
       <div className="mb-6 overflow-hidden rounded-lg">
         <img 
           src={service.image} 
-          alt={`${service.title} - ${service.subtitle}`}
+          alt={service.title}
           className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
           loading="lazy"
         />
       </div>
-      <h3 
-        id={`service-title-${index}`}
-        className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors"
-      >
+      <h3 className="text-xl font-semibold mb-3 text-foreground group-hover:text-primary transition-colors">
         {service.title}
       </h3>
       <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
@@ -61,11 +57,11 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
       </p>
       {service.focusAreas && (
         <div className="mb-4 flex-grow">
-          <p className="text-sm font-semibold text-foreground mb-2" id={`focus-areas-${index}`}>Focus Areas:</p>
-          <ul className="text-sm text-muted-foreground space-y-1" aria-labelledby={`focus-areas-${index}`}>
+          <p className="text-sm font-semibold text-foreground mb-2">Focus Areas:</p>
+          <ul className="text-sm text-muted-foreground space-y-1">
             {service.focusAreas.map((area: string, idx: number) => (
               <li key={idx} className="flex items-start">
-                <span className="text-primary mr-2" aria-hidden="true">•</span>
+                <span className="text-primary mr-2">•</span>
                 <span>{area}</span>
               </li>
             ))}
@@ -78,7 +74,7 @@ const ServiceCard = ({ service, index }: { service: any; index: number }) => {
           {service.outcome}
         </p>
       </div>
-    </article>
+    </div>
   );
 };
 
@@ -179,22 +175,17 @@ const Services = () => {
   ];
 
   return (
-    <section 
-      id="services" 
-      className="py-24 relative overflow-hidden" 
-      style={{ backgroundColor: 'hsl(var(--section-light))' }}
-      aria-labelledby="services-heading"
-    >
+    <section id="services" className="py-24 relative overflow-hidden" style={{ backgroundColor: 'hsl(var(--section-light))' }}>
       <PerlinNoiseFlow />
       {/* Subtle background decoration */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" aria-hidden="true" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary/5 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 id="services-heading" className="text-4xl md:text-5xl font-heading font-normal mb-6">
+          <h2 className="text-4xl md:text-5xl font-heading font-normal mb-6">
             Our <span className="text-primary font-medium">Services</span>
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" aria-hidden="true" />
+          <div className="w-20 h-1 bg-primary mx-auto mb-6 opacity-0" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Tailored solutions designed to address your unique challenges and accelerate growth
           </p>
